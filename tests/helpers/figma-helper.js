@@ -9,7 +9,7 @@ import https from 'https';
  */
 export async function downloadFigmaScreenshot() {
   const figmaFileKey = process.env.FIGMA_FILE_KEY || 'qh39N0zcMJfRKKkjPnBXKJ';
-  const nodeId = process.env.FIGMA_NODE_ID || '109:1005';
+  const nodeId = process.env.FIGMA_NODE_ID || '109:1035'; // Frame 1 on Page 42 with component instances
   const figmaToken = process.env.FIGMA_ACCESS_TOKEN || process.env.figma_token;
   
   if (!figmaToken) {
@@ -61,13 +61,20 @@ async function getFigmaImageUrl(fileKey, nodeId, token) {
       res.on('end', () => {
         try {
           const response = JSON.parse(data);
+          
           if (response.err) {
             reject(new Error(response.err));
+          } else if (response.status && response.status !== 200) {
+            reject(new Error(`Figma API error: ${response.status}`));
           } else {
-            const imageUrl = response.images[nodeId];
+            const imageUrl = response.images?.[nodeId];
+            if (!imageUrl) {
+              console.warn(`⚠️  No image available for node ${nodeId}. The node may not exist or be exportable.`);
+            }
             resolve(imageUrl);
           }
         } catch (error) {
+          console.error('❌ Error parsing Figma API response:', error.message);
           reject(error);
         }
       });

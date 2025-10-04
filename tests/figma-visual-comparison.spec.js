@@ -3,7 +3,7 @@ import { downloadFigmaScreenshot } from './helpers/figma-helper.js';
 
 /**
  * Visual comparison test between Figma design and implemented code
- * Figma Design: https://www.figma.com/design/qh39N0zcMJfRKKkjPnBXKJ/shadcn-ds?node-id=109-1005
+ * Figma Design: https://www.figma.com/design/qh39N0zcMJfRKKkjPnBXKJ/shadcn-ds?node-id=109-1035
  */
 test.describe('Figma Design vs Code Comparison', () => {
   

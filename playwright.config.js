@@ -25,12 +25,15 @@ export default defineConfig({
     },
   ],
 
-  webServer: {
+  // Comment out webServer to use manually running dev server
+  // Uncomment for CI/CD where server needs to start automatically
+  /* webServer: {
     command: 'npm run dev',
     url: 'http://localhost:5178',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true,
     stdout: 'ignore',
     stderr: 'pipe',
-  },
+    timeout: 120000,
+  }, */
 });
 

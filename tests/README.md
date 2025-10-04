@@ -29,8 +29,8 @@ figma_token=figd_your_token_here
 # Optional: Figma File Key (defaults to current project)
 FIGMA_FILE_KEY=qh39N0zcMJfRKKkjPnBXKJ
 
-# Optional: Figma Node ID (defaults to contact form: 109:1005)
-FIGMA_NODE_ID=109:1005
+# Optional: Figma Node ID (defaults to contact form: 109:1035)
+FIGMA_NODE_ID=109:1035
 ```
 
 **Note**: Both `figma_token` and `FIGMA_ACCESS_TOKEN` are supported for the token.

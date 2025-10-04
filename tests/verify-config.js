@@ -24,7 +24,7 @@ if (!process.env.FIGMA_FILE_KEY) {
 }
 
 // Check node ID
-const nodeId = process.env.FIGMA_NODE_ID || '109:1005';
+const nodeId = process.env.FIGMA_NODE_ID || '109:1035';
 console.log('✅ Figma Node ID:', nodeId);
 if (!process.env.FIGMA_NODE_ID) {
   console.log('   (using default)');

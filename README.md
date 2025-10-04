@@ -159,16 +159,33 @@ npx shadcn@latest add dialog
 
 ## 🎯 Figma Integration
 
-This project includes Figma MCP server configuration for seamless design-to-code workflow.
+This project includes Figma MCP server configuration and Code Connect setup for seamless design-to-code workflow.
 
-### Setup
+### Figma MCP Server
 1. Install the Figma plugin: `Talk to Figma`
 2. The MCP server is already configured in `.cursor/mcp.json`
 3. Use natural language to interact with your Figma designs
 
+### Figma Code Connect (Organization/Enterprise)
+This repository is **Code Connect ready**! Connect your components to Figma for:
+- Real code snippets in Dev Mode
+- Enhanced AI agent guidance
+- Property mapping from Figma to code
+
+**Setup Guide:** See `FIGMA_CODE_CONNECT.md` for detailed instructions.
+
+**Quick Start:**
+```bash
+# Option 1: Use Code Connect UI in Figma (recommended)
+# Option 2: Use CLI
+npm install --save-dev @figma/code-connect
+npm run figma:connect:publish
+```
+
 ### Example Prompts
 - "Get the variables from my Figma selection"
 - "Generate code for my Figma selection"
+- "Show me how to use the Button component" (with Code Connect)
 
 See `prompt/figma.md` for more examples.
 

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://www.figma.com/code-connect/schema.json",
+  "codeConnect": {
+    "include": [
+      "src/components/ui/**/*.jsx"
+    ],
+    "exclude": [
+      "**/*.test.{js,jsx}",
+      "**/*.stories.{js,jsx}"
+    ],
+    "label": "shadcn/ui Components",
+    "documentUrlSubstitutions": {},
+    "parser": "react"
+  }
+}

@@ -30,6 +30,10 @@ dist-ssr
 .env.production.local
 .env.development.local
 .env.test.local
+.env*.local
+
+# Figma tokens (security)
+.figma.token
 
 # Build outputs
 build

@@ -12,7 +12,7 @@ import figma from "@figma/code-connect"
 
 figma.connect(
   Button,
-  "https://www.figma.com/design/YOUR_FILE_KEY?node-id=YOUR_NODE_ID",
+  "https://www.figma.com/design/qh39N0zcMJfRKKkjPnBXKJ/shadcn-ds?node-id=1-85",
   {
     props: {
       variant: figma.enum("Variant", {

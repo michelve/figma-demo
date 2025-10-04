@@ -2,11 +2,11 @@
   "$schema": "https://www.figma.com/code-connect/schema.json",
   "codeConnect": {
     "include": [
-      "src/components/ui/**/*.jsx"
+      "src/components/ui/**/*.{jsx,tsx}"
     ],
     "exclude": [
-      "**/*.test.{js,jsx}",
-      "**/*.stories.{js,jsx}"
+      "**/*.test.{js,jsx,ts,tsx}",
+      "**/*.stories.{js,jsx,ts,tsx}"
     ],
     "label": "shadcn/ui Components",
     "documentUrlSubstitutions": {},

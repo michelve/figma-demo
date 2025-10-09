@@ -14,7 +14,7 @@ import { User, Mail, ArrowRight } from 'lucide-react'
 // Main Card component connection
 figma.connect(
   Card,
-  'YOUR_FIGMA_CARD_URL', // Replace with your Figma component URL
+  'https://www.figma.com/design/qXl9yDZA6jPlyknXOSLe51/DesignDS-MCP?node-id=5-294&m=dev', // Replace with your Figma component URL
   {
     props: {
       // Map Figma title text to title prop
@@ -47,7 +47,7 @@ figma.connect(
 // Card with Button Content - Example mapping
 figma.connect(
   Card,
-  'YOUR_FIGMA_CARD_WITH_BUTTON_URL', // Replace with specific variant URL
+  'https://www.figma.com/design/qXl9yDZA6jPlyknXOSLe51/DesignDS-MCP?node-id=5-405&m=dev', // Replace with specific variant URL
   {
     props: {
       title: figma.textContent('Card Title'),

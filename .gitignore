@@ -36,3 +36,4 @@ dist-ssr
 
 # Playwright snapshots (comment out if you want to commit baselines)
 /tests/**/*-snapshots/
+docs/presentation-deck.md

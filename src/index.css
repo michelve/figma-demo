@@ -37,6 +37,12 @@
     --radius: 0.5rem;
   }
 
+  /* 
+    DARK MODE CLASSES DISABLED
+    Uncomment the section below if you want to re-enable dark mode later
+  */
+
+  /*
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -58,14 +64,20 @@
     --input: 222.2 47.4% 11.2%;
     --ring: 212.7 26.8% 83.9%;
   }
+  */
 }
 
-/* Enhanced Global Styles using Standard Color Variables */
+/* Enhanced Global Styles using Standard Color Variables - LIGHT MODE FORCED */
 body {
   font-family: var(--font-family-primary);
-  color: var(--color-foreground);              /* Standard: Uses standard foreground color */
-  background-color: var(--color-background);   /* Standard: Uses standard background color */
-  line-height: 1.6;                           /* Enhanced: Better readability */
+  color: var(--color-foreground) !important;              /* Standard: Uses standard foreground color - LIGHT MODE */
+  background-color: var(--color-background) !important;   /* Standard: Uses standard background color - LIGHT MODE */
+  line-height: 1.6;                                      /* Enhanced: Better readability */
+}
+
+/* Force light mode on HTML element */
+html {
+  color-scheme: light !important;   /* Force light mode on the document */
 }
 
 /* Ensure all text elements inherit proper contrast */

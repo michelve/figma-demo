@@ -13,7 +13,7 @@ import { Search, Download, ArrowRight, Plus, X } from 'lucide-react'
 // Main Button component connection
 figma.connect(
   Button,
-  'YOUR_FIGMA_BUTTON_URL', // Replace with your Figma component URL
+  'https://www.figma.com/design/qXl9yDZA6jPlyknXOSLe51/DesignDS-MCP?node-id=5-309', // Replace with your Figma component URL
   {
     props: {
       // Map Figma variant property to React variant prop

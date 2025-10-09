@@ -99,32 +99,58 @@
 }
 
 /* =========================
-   DARK MODE OVERRIDES
+   LIGHT MODE - FORCED DEFAULT
    ========================= */
 
+/* Force light mode as default - Override any dark mode preferences */
+:root {
+  /* Ensure light mode surface tokens */
+  --surface-background: var(--color-neutral-50) !important;
+  --surface-elevated: var(--color-white) !important;
+  --surface-muted: var(--color-neutral-100) !important;
+  
+  /* Ensure light mode content tokens */
+  --content-primary: var(--color-neutral-900) !important;
+  --content-secondary: var(--color-neutral-600) !important;
+  --content-tertiary: var(--color-neutral-500) !important;
+  --content-inverse: var(--color-white) !important;
+  
+  /* Ensure light mode border tokens */
+  --border-default: var(--color-neutral-200) !important;
+  --border-interactive: var(--color-neutral-300) !important;
+  
+  /* Ensure light mode action tokens */
+  --action-secondary: var(--color-neutral-100) !important;
+  --action-secondary-hover: var(--color-neutral-200) !important;
+  --action-secondary-active: var(--color-neutral-300) !important;
+}
+
+/* 
+   DARK MODE DISABLED - Remove automatic dark mode switching
+   Uncomment the section below if you want to re-enable dark mode later
+*/
+
+/*
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Surface adjustments for dark mode */
     --surface-background: var(--color-neutral-900);
     --surface-elevated: var(--color-neutral-800);
     --surface-muted: var(--color-neutral-800);
     
-    /* Content adjustments for dark mode */
     --content-primary: var(--color-neutral-50);
     --content-secondary: var(--color-neutral-300);
     --content-tertiary: var(--color-neutral-400);
     --content-inverse: var(--color-neutral-900);
     
-    /* Border adjustments for dark mode */
     --border-default: var(--color-neutral-700);
     --border-interactive: var(--color-neutral-600);
     
-    /* Action adjustments for dark mode */
     --action-secondary: var(--color-neutral-700);
     --action-secondary-hover: var(--color-neutral-600);
     --action-secondary-active: var(--color-neutral-500);
   }
 }
+*/
 
 /* =========================
    HIGH CONTRAST MODE

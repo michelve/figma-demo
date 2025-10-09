@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../components/ui/Button'
 import Checkbox from '../components/ui/Checkbox'
+import Card from '../components/ui/Card'
 import TypographyDemo from '../components/TypographyDemo'
 import { 
   Search, 
@@ -11,7 +12,10 @@ import {
   Heart, 
   Settings, 
   Type,
-  Package
+  Package,
+  User,
+  Mail,
+  Calendar
 } from 'lucide-react'
 import '../styles/pages/ComponentsDemo.css'
 
@@ -231,6 +235,151 @@ function ComponentsDemo() {
                 checked={true}
                 onChange={() => {}}
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Card Component Showcase */}
+        <section className="demo__section">
+          <div className="demo__section-header">
+            <h2 className="demo__section-title">Card Component</h2>
+            <p className="demo__section-desc">
+              Structured card component with header, description, divider, and flexible content areas
+            </p>
+          </div>
+
+          {/* Basic Cards */}
+          <div className="demo__group">
+            <h3 className="demo__group-title">Basic Cards</h3>
+            <div className="demo__row demo__row--cards">
+              <Card 
+                title="Simple Card"
+                description="A basic card with title and description only."
+              />
+              
+              <Card 
+                title="Card with Content"
+                description="This card includes content below the divider."
+              >
+                <div style={{ padding: '16px', backgroundColor: 'var(--surface-muted)', borderRadius: '4px' }}>
+                  <p style={{ margin: 0, color: 'var(--content-secondary)' }}>
+                    This is the flexible content area. It can contain any React components.
+                  </p>
+                </div>
+              </Card>
+
+              <Card 
+                title="User Profile"
+                description="Profile card with user information and actions."
+              >
+                <div className="card-profile">
+                  <div className="card-profile__info">
+                    <div className="card-profile__avatar">
+                      <User size={24} />
+                    </div>
+                    <div className="card-profile__details">
+                      <h4 style={{ margin: 0, color: 'var(--content-primary)' }}>John Doe</h4>
+                      <p style={{ margin: 0, color: 'var(--content-secondary)', fontSize: 'var(--text-sm)' }}>
+                        john.doe@example.com
+                      </p>
+                    </div>
+                  </div>
+                  <div className="card-profile__actions">
+                    <Button variant="outline" size="sm" icon={<Mail />}>
+                      Contact
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+
+          {/* Card Variants */}
+          <div className="demo__group">
+            <h3 className="demo__group-title">Card Variants</h3>
+            <div className="demo__row demo__row--cards">
+              <Card 
+                className="card--elevated"
+                title="Elevated Card"
+                description="Card with enhanced shadow elevation."
+              >
+                <Button variant="primary" icon={<ArrowRight />}>
+                  Learn More
+                </Button>
+              </Card>
+
+              <Card 
+                className="card--outlined"
+                title="Outlined Card"
+                description="Card with emphasized border styling."
+              >
+                <div className="card-stats">
+                  <div className="card-stat">
+                    <span className="card-stat__value">24</span>
+                    <span className="card-stat__label">Projects</span>
+                  </div>
+                  <div className="card-stat">
+                    <span className="card-stat__value">1.2k</span>
+                    <span className="card-stat__label">Followers</span>
+                  </div>
+                </div>
+              </Card>
+
+              <Card 
+                className="card--compact"
+                title="Compact Card"
+                description="Card with reduced padding for dense layouts."
+              >
+                <p style={{ margin: 0, color: 'var(--content-secondary)', fontSize: 'var(--text-sm)' }}>
+                  Compact content area with minimal spacing.
+                </p>
+              </Card>
+            </div>
+          </div>
+
+          {/* Interactive Content */}
+          <div className="demo__group">
+            <h3 className="demo__group-title">Interactive Content</h3>
+            <div className="demo__row demo__row--cards">
+              <Card 
+                title="Form Example"
+                description="Card containing form elements and interactions."
+              >
+                <div className="card-form">
+                  <Checkbox 
+                    label="Enable notifications"
+                    description="Receive updates about your account activity."
+                    checked={terms}
+                    onChange={(e) => setTerms(e.target.checked)}
+                  />
+                  <div className="card-form__actions">
+                    <Button variant="primary" size="sm">
+                      Save Settings
+                    </Button>
+                    <Button variant="outline" size="sm">
+                      Cancel
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card 
+                title="No Divider"
+                description="Card with divider disabled for seamless content flow."
+                showDivider={false}
+              >
+                <div style={{ 
+                  background: 'linear-gradient(135deg, var(--color-primary-50), var(--color-accent-50))',
+                  padding: 'var(--spacing-component)',
+                  borderRadius: 'var(--radius-md)',
+                  textAlign: 'center'
+                }}>
+                  <Calendar size={32} style={{ color: 'var(--color-primary-600)', marginBottom: '8px' }} />
+                  <p style={{ margin: 0, color: 'var(--content-primary)' }}>
+                    Upcoming Event
+                  </p>
+                </div>
+              </Card>
             </div>
           </div>
         </section>

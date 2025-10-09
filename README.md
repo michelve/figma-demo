@@ -29,6 +29,8 @@ figma_demo/
 │   ├── App.jsx           # Demo application
 │   ├── main.jsx          # Entry point
 │   └── index.css         # Main stylesheet
+├── docs/                 # Project documentation
+│   └── figma-code-connect/  # Figma Code Connect guides
 ├── components.json       # shadcn/ui configuration
 ├── tailwind.config.js    # Tailwind configuration
 ├── vite.config.js        # Vite configuration
@@ -167,14 +169,24 @@ This project includes Figma MCP server configuration and Code Connect setup for 
 3. Use natural language to interact with your Figma designs
 
 ### Figma Code Connect (Organization/Enterprise)
+
 This repository is **Code Connect ready**! Connect your components to Figma for:
+
 - Real code snippets in Dev Mode
-- Enhanced AI agent guidance
+- Enhanced AI agent guidance  
 - Property mapping from Figma to code
 
-**Setup Guide:** See `FIGMA_CODE_CONNECT.md` for detailed instructions.
+📖 **Complete Documentation**: See [`docs/figma-code-connect/`](./docs/figma-code-connect/) for comprehensive guides:
+
+- [📋 Overview & Quick Start](./docs/figma-code-connect/README.md)
+- [⚙️ Configuration Setup](./docs/figma-code-connect/configuration.md)
+- [🧩 Component Definitions](./docs/figma-code-connect/component-definitions.md)
+- [🔗 Component Connections](./docs/figma-code-connect/component-connections.md)
+- [💡 Real-world Examples](./docs/figma-code-connect/examples.md)
+- [🔧 Troubleshooting](./docs/figma-code-connect/troubleshooting.md)
 
 **Quick Start:**
+
 ```bash
 # Option 1: Use Code Connect UI in Figma (recommended)
 # Option 2: Use CLI
@@ -201,6 +213,17 @@ See `prompt/figma.md` for more examples.
 - **Animations**: tailwindcss-animate
 
 ## 📖 Documentation
+
+### Project Documentation
+
+- [📋 Figma Code Connect Overview](./docs/figma-code-connect/README.md) - Complete guide to connecting Figma designs with code
+- [⚙️ Configuration](./docs/figma-code-connect/configuration.md) - Setup and authentication
+- [🧩 Component Definitions](./docs/figma-code-connect/component-definitions.md) - Define component patterns
+- [🔗 Component Connections](./docs/figma-code-connect/component-connections.md) - API reference and connections
+- [💡 Examples](./docs/figma-code-connect/examples.md) - Real-world implementation examples
+- [🔧 Troubleshooting](./docs/figma-code-connect/troubleshooting.md) - Common issues and solutions
+
+### External Documentation
 
 - [shadcn/ui Documentation](https://ui.shadcn.com)
 - [Tailwind CSS Documentation](https://tailwindcss.com)

@@ -86,6 +86,10 @@
   --color-neutral-900: #18181b;
   --color-neutral-950: #09090b;
 
+  /* Basic Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
   /* Semantic Color Mappings */
   --color-background: var(--color-neutral-50);
   --color-foreground: var(--color-neutral-900);

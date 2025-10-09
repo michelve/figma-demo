@@ -1,0 +1,139 @@
+/* Semantic Design Tokens */
+/* These tokens provide universal meaning and map to primitive tokens */
+
+:root {
+  /* =========================
+     ACTION TOKENS - Interactive Elements
+     ========================= */
+  
+  /* Primary Actions */
+  --action-primary: var(--color-primary-600);
+  --action-primary-hover: var(--color-primary-700);
+  --action-primary-active: var(--color-primary-800);
+  
+  /* Secondary Actions */
+  --action-secondary: var(--color-neutral-100);
+  --action-secondary-hover: var(--color-neutral-200);
+  --action-secondary-active: var(--color-neutral-300);
+  
+  /* Destructive Actions */
+  --action-destructive: var(--color-error-500);
+  --action-destructive-hover: var(--color-error-600);
+  --action-destructive-active: var(--color-error-700);
+
+  /* Outline/Ghost Actions */
+  --action-outline: transparent;
+  --action-outline-text: var(--color-primary-600);
+  --action-outline-border: var(--color-primary-600);
+
+  /* =========================
+     SURFACE TOKENS - Backgrounds
+     ========================= */
+  
+  --surface-background: var(--color-neutral-50);
+  --surface-elevated: var(--color-white);
+  --surface-overlay: rgba(0, 0, 0, 0.5);
+  --surface-muted: var(--color-neutral-100);
+
+  /* =========================
+     CONTENT TOKENS - Text & Icons
+     ========================= */
+  
+  --content-primary: var(--color-neutral-900);
+  --content-secondary: var(--color-neutral-600);
+  --content-tertiary: var(--color-neutral-500);
+  --content-inverse: var(--color-white);
+  --content-disabled: var(--color-neutral-400);
+
+  /* =========================
+     BORDER TOKENS - Separators
+     ========================= */
+  
+  --border-default: var(--color-neutral-200);
+  --border-interactive: var(--color-neutral-300);
+  --border-focus: var(--color-primary-600);
+  --border-error: var(--color-error-500);
+
+  /* =========================
+     SPACING TOKENS - Universal Layout
+     ========================= */
+  
+  --spacing-component: var(--space-4);     /* 16px - Standard component spacing */
+  --spacing-tight: var(--space-2);         /* 8px - Tight spacing */
+  --spacing-loose: var(--space-6);         /* 24px - Loose spacing */
+  --spacing-section: var(--space-8);       /* 32px - Section spacing */
+
+  /* =========================
+     STATE TOKENS - Interactive States
+     ========================= */
+  
+  --state-success: var(--color-success-500);
+  --state-warning: var(--color-warning-500);
+  --state-error: var(--color-error-500);
+  --state-info: var(--color-primary-500);
+  
+  --state-disabled-opacity: 0.5;
+  --state-hover-opacity: 0.9;
+  --state-active-opacity: 0.8;
+
+  /* =========================
+     TYPOGRAPHY TOKENS - Semantic Text
+     ========================= */
+  
+  --typography-action: var(--font-family-primary);
+  --typography-content: var(--font-family-primary);
+  --typography-heading: var(--font-family-heading);
+  --typography-code: var(--font-family-mono);
+  
+  --typography-weight-action: var(--font-weight-medium);
+  --typography-weight-content: var(--font-weight-normal);
+  --typography-weight-emphasis: var(--font-weight-semibold);
+
+  /* =========================
+     RADIUS TOKENS - Semantic Rounding
+     ========================= */
+  
+  --radius-interactive: var(--radius-md);   /* 6px - Buttons, inputs */
+  --radius-surface: var(--radius-lg);      /* 8px - Cards, panels */
+  --radius-overlay: var(--radius-xl);      /* 12px - Modals, popovers */
+}
+
+/* =========================
+   DARK MODE OVERRIDES
+   ========================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Surface adjustments for dark mode */
+    --surface-background: var(--color-neutral-900);
+    --surface-elevated: var(--color-neutral-800);
+    --surface-muted: var(--color-neutral-800);
+    
+    /* Content adjustments for dark mode */
+    --content-primary: var(--color-neutral-50);
+    --content-secondary: var(--color-neutral-300);
+    --content-tertiary: var(--color-neutral-400);
+    --content-inverse: var(--color-neutral-900);
+    
+    /* Border adjustments for dark mode */
+    --border-default: var(--color-neutral-700);
+    --border-interactive: var(--color-neutral-600);
+    
+    /* Action adjustments for dark mode */
+    --action-secondary: var(--color-neutral-700);
+    --action-secondary-hover: var(--color-neutral-600);
+    --action-secondary-active: var(--color-neutral-500);
+  }
+}
+
+/* =========================
+   HIGH CONTRAST MODE
+   ========================= */
+
+@media (prefers-contrast: high) {
+  :root {
+    --border-default: var(--color-neutral-900);
+    --border-interactive: var(--color-neutral-900);
+    --state-disabled-opacity: 0.7;
+  }
+}

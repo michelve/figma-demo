@@ -8,6 +8,11 @@
 @import './colors.css';
 @import './typography.css';
 @import './spacing.css';
+
+/* Semantic Design Tokens */
+@import './semantic.css';
+
+/* Component-specific tokens */
 @import './components.css';
 
 /* Design Token Documentation

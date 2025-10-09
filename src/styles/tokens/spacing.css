@@ -40,10 +40,10 @@
   /* Component-specific Spacing */
   
   /* Button Spacing */
-  --button-padding-sm: var(--space-0) var(--space-3); /* 0 12px */
-  --button-padding-md: var(--space-0) var(--space-4); /* 0 16px */
-  --button-padding-lg: var(--space-0) var(--space-6); /* 0 24px */
-  --button-gap: var(--space-2); /* 8px gap between icon and text */
+  --button-padding-sm: var(--spacing-tight) var(--space-3); /* tight + 12px */
+  --button-padding-md: var(--spacing-tight) var(--spacing-component); /* tight + component */
+  --button-padding-lg: var(--spacing-tight) var(--spacing-loose); /* tight + loose */
+  --button-gap: var(--spacing-tight); /* 8px gap between icon and text */
 
   /* Button Heights */
   --button-height-sm: 2rem;    /* 32px */

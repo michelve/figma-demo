@@ -1,0 +1,617 @@
+[
+  {
+    "Design System | Base Tokens": {
+      "modes": {
+        "Light Mode": {
+          "colors": {
+            "primary": {
+              "50": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#eff6ff",
+                "$description": "Primary color scale - lightest",
+                "$codeSyntax": {
+                  "WEB": "var(--color-primary-50)",
+                  "ANDROID": "colorPrimary50",
+                  "iOS": "primaryColor50"
+                }
+              },
+              "100": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#dbeafe"
+              },
+              "200": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#bfdbfe"
+              },
+              "300": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#93c5fd"
+              },
+              "400": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#60a5fa"
+              },
+              "500": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#3b82f6"
+              },
+              "600": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#2563eb",
+                "$description": "Primary brand color",
+                "$codeSyntax": {
+                  "WEB": "var(--color-primary-600)",
+                  "ANDROID": "colorPrimary600",
+                  "iOS": "primaryColor600"
+                }
+              },
+              "700": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#1d4ed8"
+              },
+              "800": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#1e40af"
+              },
+              "900": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#1e3a8a"
+              },
+              "950": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#172554"
+              }
+            },
+            "neutral": {
+              "50": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#fafafa"
+              },
+              "100": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#f4f4f5"
+              },
+              "200": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#e4e4e7"
+              },
+              "300": {
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+                "$type": "color",
+                "$value": "#d4d4d8"
+              },
+              "400": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#a1a1aa"
+              },
+              "500": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#71717a"
+              },
+              "600": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#52525b"
+              },
+              "700": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#3f3f46"
+              },
+              "800": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#27272a"
+              },
+              "900": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#18181b"
+              },
+              "950": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#09090b"
+              },
+              "white": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#ffffff",
+                "$codeSyntax": {
+                  "WEB": "var(--color-white)",
+                  "ANDROID": "colorWhite",
+                  "iOS": "whiteColor"
+                }
+              }
+            },
+            "success": {
+              "500": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#22c55e",
+                "$description": "Success state color"
+              }
+            },
+            "warning": {
+              "500": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#f59e0b",
+                "$description": "Warning state color"
+              }
+            },
+            "error": {
+              "500": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#ef4444",
+                "$description": "Error state color"
+              }
+            }
+          },
+          "spacing": {
+            "xs": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 4,
+              "$description": "Extra small spacing",
+              "$codeSyntax": {
+                "WEB": "var(--spacing-xs)",
+                "ANDROID": "spacingXs",
+                "iOS": "spacingXS"
+              }
+            },
+            "sm": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 8
+            },
+            "md": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 16
+            },
+            "lg": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 24
+            },
+            "xl": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 32
+            },
+            "2xl": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 48
+            },
+            "3xl": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 64
+            }
+          },
+          "radius": {
+            "none": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$value": 0
+            },
+            "sm": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$value": 4
+            },
+            "md": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$value": 6,
+              "$description": "Medium border radius",
+              "$codeSyntax": {
+                "WEB": "var(--radius-md)",
+                "ANDROID": "radiusMd",
+                "iOS": "radiusMedium"
+              }
+            },
+            "lg": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$value": 8
+            },
+            "xl": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$value": 12
+            },
+            "full": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$value": 9999,
+              "$description": "Full radius for circular elements"
+            }
+          },
+          "typography": {
+            "font-family": {
+              "primary": {
+                "$scopes": ["FONT_FAMILY"],
+                "$type": "string",
+                "$value": "system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif",
+                "$description": "Primary font family",
+                "$codeSyntax": {
+                  "WEB": "var(--font-primary)",
+                  "ANDROID": "fontPrimary",
+                  "iOS": "fontPrimary"
+                }
+              },
+              "heading": {
+                "$scopes": ["FONT_FAMILY"],
+                "$type": "string",
+                "$value": "'Poppins', system-ui, -apple-system, sans-serif",
+                "$description": "Heading font family"
+              },
+              "mono": {
+                "$scopes": ["FONT_FAMILY"],
+                "$type": "string",
+                "$value": "'Fira Code', 'Monaco', 'Cascadia Code', 'Ubuntu Mono', monospace",
+                "$description": "Monospace font for code"
+              }
+            },
+            "font-size": {
+              "xs": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 12
+              },
+              "sm": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 14
+              },
+              "base": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 16,
+                "$description": "Base font size",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-base)",
+                  "ANDROID": "fontSizeBase",
+                  "iOS": "fontSizeBase"
+                }
+              },
+              "lg": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 18
+              },
+              "xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 20
+              },
+              "2xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 24
+              }
+            },
+            "font-weight": {
+              "normal": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 400
+              },
+              "medium": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 500,
+                "$description": "Medium font weight",
+                "$codeSyntax": {
+                  "WEB": "var(--font-weight-medium)",
+                  "ANDROID": "fontWeightMedium",
+                  "iOS": "fontWeightMedium"
+                }
+              },
+              "semibold": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 600
+              },
+              "bold": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 700
+              }
+            }
+          },
+          "opacity": {
+            "0": {
+              "$scopes": ["OPACITY"],
+              "$type": "float",
+              "$value": 0,
+              "$description": "Completely transparent"
+            },
+            "50": {
+              "$scopes": ["OPACITY"],
+              "$type": "float",
+              "$value": 0.5
+            },
+            "100": {
+              "$scopes": ["OPACITY"],
+              "$type": "float",
+              "$value": 1,
+              "$description": "Completely opaque"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "Design System | Semantic Tokens": {
+      "modes": {
+        "Default": {
+          "action": {
+            "primary": {
+              "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.primary.600}",
+              "$description": "Primary action color - main brand interaction",
+              "$codeSyntax": {
+                "WEB": "var(--action-primary)",
+                "ANDROID": "actionPrimary",
+                "iOS": "actionPrimary"
+              }
+            },
+            "primary-hover": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.primary.700}",
+              "$description": "Primary action hover state"
+            },
+            "secondary": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.100}",
+              "$description": "Secondary action color"
+            },
+            "destructive": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.error.500}",
+              "$description": "Destructive action color"
+            }
+          },
+          "surface": {
+            "background": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.50}",
+              "$description": "Main background surface",
+              "$codeSyntax": {
+                "WEB": "var(--surface-background)",
+                "ANDROID": "surfaceBackground",
+                "iOS": "surfaceBackground"
+              }
+            },
+            "elevated": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.white}",
+              "$description": "Elevated surface (cards, modals)"
+            },
+            "overlay": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.900}",
+              "$description": "Overlay surface for modals"
+            }
+          },
+          "content": {
+            "primary": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.900}",
+              "$description": "Primary text content",
+              "$codeSyntax": {
+                "WEB": "var(--content-primary)",
+                "ANDROID": "contentPrimary",
+                "iOS": "contentPrimary"
+              }
+            },
+            "secondary": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.600}",
+              "$description": "Secondary text content"
+            },
+            "inverse": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.white}",
+              "$description": "Inverse text content (on dark backgrounds)"
+            }
+          },
+          "border": {
+            "default": {
+              "$scopes": ["STROKE_COLOR"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.200}",
+              "$description": "Default border color"
+            },
+            "interactive": {
+              "$scopes": ["STROKE_COLOR"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{colors.neutral.300}",
+              "$description": "Interactive element borders"
+            }
+          },
+          "spacing": {
+            "component": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{spacing.md}",
+              "$description": "Standard component spacing",
+              "$codeSyntax": {
+                "WEB": "var(--spacing-component)",
+                "ANDROID": "spacingComponent",
+                "iOS": "spacingComponent"
+              }
+            },
+            "tight": {
+              "$scopes": ["GAP"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{spacing.sm}",
+              "$description": "Tight spacing for compact layouts"
+            },
+            "loose": {
+              "$scopes": ["GAP"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Base Tokens",
+              "$value": "{spacing.lg}",
+              "$description": "Loose spacing for spacious layouts"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "Component Library | Button Tokens": {
+      "modes": {
+        "Default": {
+          "button": {
+            "primary": {
+              "background": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{action.primary}",
+                "$description": "Primary button uses semantic primary action color"
+              },
+              "text": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{content.inverse}",
+                "$description": "Primary button text uses inverse content color"
+              },
+              "padding": {
+                "$scopes": ["GAP"],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{spacing.component}",
+                "$description": "Primary button uses semantic component spacing"
+              },
+              "radius": {
+                "$scopes": ["CORNER_RADIUS"],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "Design System | Base Tokens",
+                "$value": "{radius.md}"
+              }
+            },
+            "secondary": {
+              "background": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{action.secondary}",
+                "$description": "Secondary button uses semantic secondary action"
+              },
+              "text": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{content.primary}",
+                "$description": "Secondary button uses primary content color"
+              },
+              "padding": {
+                "$scopes": ["GAP"],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{spacing.component}"
+              }
+            },
+            "outline": {
+              "background": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{surface.background}",
+                "$description": "Outline button uses background surface"
+              },
+              "text": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{content.primary}"
+              },
+              "border": {
+                "$scopes": ["STROKE_COLOR"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{border.interactive}",
+                "$description": "Outline button uses interactive border"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

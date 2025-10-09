@@ -2,14 +2,47 @@
   "$schema": "https://www.figma.com/code-connect/schema.json",
   "codeConnect": {
     "include": [
-      "src/components/ui/**/*.{jsx,tsx}"
+      "src/components/ui/**/*.{jsx,tsx}",
+      "src/components/ui/**/*.figma.{js,jsx,ts,tsx}"
     ],
     "exclude": [
       "**/*.test.{js,jsx,ts,tsx}",
-      "**/*.stories.{js,jsx,ts,tsx}"
+      "**/*.stories.{js,jsx,ts,tsx}",
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**"
     ],
-    "label": "shadcn/ui Components",
-    "documentUrlSubstitutions": {},
-    "parser": "react"
+    "label": "Custom UI Components with Design Tokens",
+    "documentUrlSubstitutions": {
+      "YOUR_FIGMA_FILE_URL": "https://www.figma.com/design/qXl9yDZA6jPlyknXOSLe51/DesignDS-MCP?node-id=0-1&t=1IlapicKMnf6a8if-1"
+    },
+    "parser": "react",
+    "outDir": "./figma-connect",
+    "config": {
+      "designTokens": {
+        "tokensPath": "src/styles/tokens",
+        "colorTokens": "src/styles/tokens/colors.css",
+        "typographyTokens": "src/styles/tokens/typography.css",
+        "spacingTokens": "src/styles/tokens/spacing.css",
+        "componentTokens": "src/styles/tokens/components.css"
+      },
+      "components": {
+        "Button": {
+          "path": "src/components/ui/Button",
+          "figmaFile": "src/components/ui/Button/Button.figma.tsx",
+          "styles": "src/components/ui/Button/Button.css",
+          "variants": ["primary", "secondary", "outline"],
+          "sizes": ["sm", "md", "lg"],
+          "features": ["icons", "disabled", "loading"]
+        }
+      },
+      "pages": {
+        "ComponentsDemo": {
+          "path": "src/pages/ComponentsDemo.jsx",
+          "styles": "src/styles/pages/ComponentsDemo.css",
+          "description": "Universal demo page showcasing all UI components"
+        }
+      }
+    }
   }
 }

@@ -16,7 +16,7 @@ import {
   ChevronLeft,
   ChevronRight
 } from 'lucide-react'
-import './ComponentsDemo.css'
+import '../styles/pages/ComponentsDemo.css'
 
 function ComponentsDemo() {
   const [likeCount, setLikeCount] = React.useState(42)

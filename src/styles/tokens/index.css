@@ -1,0 +1,135 @@
+/* Design Tokens - Main Index
+ * 
+ * This file imports all design token files and serves as the single entry point
+ * for the design system tokens. Import this file to get access to all design tokens.
+ */
+
+/* Core Design Tokens */
+@import './colors.css';
+@import './typography.css';
+@import './spacing.css';
+@import './components.css';
+
+/* Design Token Documentation
+ * 
+ * This design system provides a comprehensive set of design tokens organized into categories:
+ * 
+ * 1. Colors (colors.css)
+ *    - Primary, secondary, accent color scales
+ *    - Semantic colors (success, warning, error)
+ *    - Component-specific color mappings
+ *    - Dark theme support
+ * 
+ * 2. Typography (typography.css)
+ *    - Font families, weights, sizes
+ *    - Line heights and letter spacing
+ *    - Component-specific typography scales
+ *    - Utility classes for typography
+ * 
+ * 3. Spacing (spacing.css)
+ *    - Consistent spacing scale (0-96)
+ *    - Component-specific padding/margin
+ *    - Border radius values
+ *    - Layout max-widths and breakpoints
+ *    - Z-index scale
+ * 
+ * 4. Components (components.css)
+ *    - Box shadows and transitions
+ *    - Focus styles and states
+ *    - Layout utilities (flex, grid)
+ *    - Component-specific tokens
+ * 
+ * Usage Examples:
+ * 
+ * CSS Variables:
+ *   color: var(--color-primary-600);
+ *   font-size: var(--font-size-lg);
+ *   padding: var(--space-4);
+ *   border-radius: var(--radius-md);
+ * 
+ * Utility Classes:
+ *   .text-lg { font-size: var(--font-size-lg); }
+ *   .p-4 { padding: var(--space-4); }
+ * 
+ * Component Classes:
+ *   .btn {
+ *     font-family: var(--button-font-family);
+ *     font-weight: var(--button-font-weight);
+ *     padding: var(--button-padding-md);
+ *     border-radius: var(--button-radius);
+ *     transition: var(--button-transition);
+ *   }
+ */
+
+/* Global Base Styles Using Design Tokens */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: var(--space-0);
+  padding: var(--space-0);
+  min-height: 100vh;
+}
+
+/* Focus Styles Using Design Tokens */
+*:focus-visible {
+  outline: var(--button-focus-ring);
+  outline-offset: var(--button-focus-ring-offset);
+}
+
+/* Selection Styles */
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-900);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: var(--space-3);
+  height: var(--space-3);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-muted-foreground);
+}
+
+/* Print Styles */
+@media print {
+  * {
+    box-shadow: var(--shadow-none) !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

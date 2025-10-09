@@ -1,0 +1,193 @@
+/* Component Design Tokens */
+:root {
+  /* Box Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-none: none;
+
+  /* Component Specific Shadows */
+  --button-shadow: var(--shadow-none);
+  --button-shadow-hover: var(--shadow-sm);
+  --button-shadow-active: var(--shadow-inner);
+  --card-shadow: var(--shadow-sm);
+  --modal-shadow: var(--shadow-2xl);
+  --dropdown-shadow: var(--shadow-lg);
+
+  /* Transitions */
+  --transition-none: none;
+  --transition-all: all 0.15s ease-in-out;
+  --transition-default: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, text-decoration-color 0.15s ease-in-out, fill 0.15s ease-in-out, stroke 0.15s ease-in-out, opacity 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out, filter 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  --transition-colors: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, text-decoration-color 0.15s ease-in-out, fill 0.15s ease-in-out, stroke 0.15s ease-in-out;
+  --transition-opacity: opacity 0.15s ease-in-out;
+  --transition-shadow: box-shadow 0.15s ease-in-out;
+  --transition-transform: transform 0.15s ease-in-out;
+
+  /* Component Specific Transitions */
+  --button-transition: var(--transition-all);
+  --link-transition: var(--transition-colors);
+  --modal-transition: var(--transition-opacity);
+
+  /* Animation Durations */
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+
+  /* Animation Timing Functions */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Borders */
+  --border-width-0: 0;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-4: 4px;
+  --border-width-8: 8px;
+
+  /* Component Specific Borders */
+  --button-border-width: var(--border-width-1);
+  --card-border-width: var(--border-width-1);
+  --input-border-width: var(--border-width-1);
+
+  /* Focus Styles */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--color-focus-ring);
+  --focus-ring-opacity: 0.5;
+
+  /* Component Focus Rings */
+  --button-focus-ring: var(--focus-ring-width) solid var(--focus-ring-color);
+  --button-focus-ring-offset: var(--focus-ring-offset);
+
+  /* Opacity Scale */
+  --opacity-0: 0;
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;
+  --opacity-100: 1;
+
+  /* Component States */
+  --state-hover-opacity: var(--opacity-90);
+  --state-active-opacity: var(--opacity-80);
+  --state-disabled-opacity: var(--opacity-50);
+
+  /* Backdrop Filters */
+  --backdrop-blur-none: none;
+  --backdrop-blur-sm: blur(4px);
+  --backdrop-blur-md: blur(8px);
+  --backdrop-blur-lg: blur(16px);
+  --backdrop-blur-xl: blur(24px);
+
+  /* Grid & Flexbox */
+  --grid-cols-1: repeat(1, minmax(0, 1fr));
+  --grid-cols-2: repeat(2, minmax(0, 1fr));
+  --grid-cols-3: repeat(3, minmax(0, 1fr));
+  --grid-cols-4: repeat(4, minmax(0, 1fr));
+  --grid-cols-6: repeat(6, minmax(0, 1fr));
+  --grid-cols-12: repeat(12, minmax(0, 1fr));
+
+  /* Aspect Ratios */
+  --aspect-square: 1 / 1;
+  --aspect-video: 16 / 9;
+  --aspect-4-3: 4 / 3;
+  --aspect-3-2: 3 / 2;
+
+  /* Cursors */
+  --cursor-auto: auto;
+  --cursor-default: default;
+  --cursor-pointer: pointer;
+  --cursor-wait: wait;
+  --cursor-text: text;
+  --cursor-move: move;
+  --cursor-help: help;
+  --cursor-not-allowed: not-allowed;
+
+  /* Component Specific Cursors */
+  --button-cursor: var(--cursor-pointer);
+  --button-cursor-disabled: var(--cursor-not-allowed);
+
+  /* User Select */
+  --select-none: none;
+  --select-text: text;
+  --select-all: all;
+  --select-auto: auto;
+
+  /* Component Specific User Select */
+  --button-user-select: var(--select-none);
+
+  /* Overflow */
+  --overflow-auto: auto;
+  --overflow-hidden: hidden;
+  --overflow-visible: visible;
+  --overflow-scroll: scroll;
+
+  /* Position */
+  --position-static: static;
+  --position-fixed: fixed;
+  --position-absolute: absolute;
+  --position-relative: relative;
+  --position-sticky: sticky;
+
+  /* Display */
+  --display-block: block;
+  --display-inline-block: inline-block;
+  --display-inline: inline;
+  --display-flex: flex;
+  --display-inline-flex: inline-flex;
+  --display-grid: grid;
+  --display-hidden: none;
+
+  /* Flex Direction */
+  --flex-row: row;
+  --flex-row-reverse: row-reverse;
+  --flex-col: column;
+  --flex-col-reverse: column-reverse;
+
+  /* Flex Wrap */
+  --flex-wrap: wrap;
+  --flex-wrap-reverse: wrap-reverse;
+  --flex-nowrap: nowrap;
+
+  /* Align Items */
+  --items-start: flex-start;
+  --items-end: flex-end;
+  --items-center: center;
+  --items-baseline: baseline;
+  --items-stretch: stretch;
+
+  /* Justify Content */
+  --justify-start: flex-start;
+  --justify-end: flex-end;
+  --justify-center: center;
+  --justify-between: space-between;
+  --justify-around: space-around;
+  --justify-evenly: space-evenly;
+
+  /* Common Component Layouts */
+  --button-display: var(--display-inline-flex);
+  --button-align-items: var(--items-center);
+  --button-justify-content: var(--justify-center);
+  --button-flex-direction: var(--flex-row);
+  --button-flex-wrap: var(--flex-nowrap);
+}

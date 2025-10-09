@@ -1,6 +1,6 @@
 import React from 'react';
-import FigmaDesignPage from './pages/FigmaDesignPage';
+import ComponentsDemo from './pages/ComponentsDemo';
 
 export default function App() {
-  return <FigmaDesignPage />;
+  return <ComponentsDemo />;
 }

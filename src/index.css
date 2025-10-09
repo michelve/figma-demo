@@ -3,6 +3,9 @@
 /* Import Design Tokens First */
 @import './styles/tokens/index.css';
 
+/* Import Typography System */
+@import './styles/typography.css';
+
 /* Tailwind CSS Directives */
 @tailwind base;
 @tailwind components;

@@ -41,6 +41,15 @@
   font-weight: var(--typography-demo-subtitle-weight);
 }
 
+/* Tab Navigation */
+.demo__tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
 /* Sections */
 .demo__section {
   background: var(--color-card);

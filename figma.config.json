@@ -34,6 +34,14 @@
           "variants": ["primary", "secondary", "outline"],
           "sizes": ["sm", "md", "lg"],
           "features": ["icons", "disabled", "loading"]
+        },
+        "Checkbox": {
+          "path": "src/components/ui/Checkbox",
+          "figmaFile": "src/components/ui/Checkbox/Checkbox.figma.tsx",
+          "styles": "src/components/ui/Checkbox/Checkbox.css",
+          "variants": ["default", "readonly", "disabled"],
+          "sizes": ["default"],
+          "features": ["indeterminate", "labels", "descriptions"]
         }
       },
       "pages": {

@@ -1,0 +1,356 @@
+/* Typography System - Using Semantic Content Tokens for Proper Contrast */
+
+/* ===== DISPLAY TEXT STYLES ===== */
+.display-large {
+  font-size: 57px;
+  line-height: 64px;
+  font-weight: 700;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: -0.25px;
+}
+
+.display-medium {
+  font-size: 45px;
+  line-height: 52px;
+  font-weight: 700;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: 0px;
+}
+
+.display-small {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: 0px;
+}
+
+/* ===== HEADING STYLES ===== */
+h1, .heading-h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: 0px;
+  margin: 0 0 24px 0;
+}
+
+h2, .heading-h2 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: 0px;
+  margin: 0 0 20px 0;
+}
+
+h3, .heading-h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: 0px;
+  margin: 0 0 16px 0;
+}
+
+h4, .heading-h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: 0px;
+  margin: 0 0 12px 0;
+}
+
+h5, .heading-h5 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: 0px;
+  margin: 0 0 8px 0;
+}
+
+h6, .heading-h6 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  font-family: var(--font-family-heading);
+  color: var(--content-primary);
+  letter-spacing: 0px;
+  margin: 0 0 8px 0;
+}
+
+/* ===== PARAGRAPH AND BODY TEXT STYLES ===== */
+p, .body-large {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: var(--font-family-body);
+  color: var(--content-primary);
+  letter-spacing: 0.5px;
+  margin: 0 0 16px 0;
+}
+
+.body-medium {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: var(--font-family-body);
+  color: var(--content-primary);
+  letter-spacing: 0.25px;
+}
+
+.body-small {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  font-family: var(--font-family-body);
+  color: var(--content-secondary);
+  letter-spacing: 0.4px;
+}
+
+/* ===== SECONDARY TEXT STYLES ===== */
+.text-secondary {
+  color: var(--content-secondary);
+}
+
+.text-tertiary {
+  color: var(--content-tertiary);
+}
+
+.text-inverse {
+  color: var(--content-inverse);
+}
+
+.text-disabled {
+  color: var(--content-disabled);
+}
+
+/* ===== LABEL STYLES ===== */
+.label-large {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: var(--font-family-body);
+  color: var(--content-secondary);
+  letter-spacing: 0.1px;
+}
+
+.label-medium {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  font-family: var(--font-family-body);
+  color: var(--content-secondary);
+  letter-spacing: 0.5px;
+}
+
+.label-small {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 500;
+  font-family: var(--font-family-body);
+  color: var(--content-secondary);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ===== HELPER AND DESCRIPTION TEXT ===== */
+.helper-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  font-family: var(--font-family-body);
+  color: var(--content-tertiary);
+  letter-spacing: 0.4px;
+}
+
+.description-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: var(--font-family-body);
+  color: var(--content-tertiary);
+  letter-spacing: 0.25px;
+}
+
+/* ===== CAPTION AND OVERLINE STYLES ===== */
+.caption {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  font-family: var(--font-family-body);
+  color: var(--content-tertiary);
+  letter-spacing: 0.4px;
+}
+
+.overline {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 500;
+  font-family: var(--font-family-body);
+  color: var(--content-secondary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ===== CODE AND MONOSPACE TEXT ===== */
+code, .code-inline {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: var(--font-family-mono);
+  color: var(--content-primary);
+  background-color: var(--surface-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0px;
+}
+
+pre, .code-block {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: var(--font-family-mono);
+  color: var(--content-primary);
+  background-color: var(--surface-secondary);
+  padding: 16px;
+  border-radius: 8px;
+  letter-spacing: 0px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+/* ===== LINK STYLES ===== */
+a, .link {
+  font-family: var(--font-family-body);
+  color: var(--action-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+a:hover, .link:hover {
+  color: var(--action-primary-hover);
+}
+
+a:focus, .link:focus {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+a:visited, .link:visited {
+  color: var(--action-primary);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-no-underline {
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .display-large {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  
+  .display-medium {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  
+  .display-small {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  h1, .heading-h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  h2, .heading-h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+/* ===== ERROR AND SUCCESS TEXT STATES ===== */
+.text-error {
+  color: var(--status-error);
+}
+
+.text-warning {
+  color: var(--status-warning);
+}
+
+.text-success {
+  color: var(--status-success);
+}
+
+.text-info {
+  color: var(--status-info);
+}

@@ -50,6 +50,12 @@
   --button-height-md: 2.5rem;  /* 40px */
   --button-height-lg: 3rem;    /* 48px */
 
+  /* Checkbox Sizing */
+  --checkbox-size-sm: 1rem;    /* 16px */
+  --checkbox-size-md: 1.25rem; /* 20px */
+  --checkbox-size-lg: 1.5rem;  /* 24px */
+  --checkbox-gap: var(--spacing-tight); /* 8px gap between checkbox and label */
+
   /* Container Spacing */
   --container-padding-xs: var(--space-4);  /* 16px */
   --container-padding-sm: var(--space-6);  /* 24px */

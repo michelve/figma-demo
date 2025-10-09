@@ -60,9 +60,16 @@
   }
 }
 
-/* Optional: Add global styles using design tokens */
+/* Enhanced Global Styles using Standard Color Variables */
 body {
   font-family: var(--font-family-primary);
-  color: var(--color-foreground);
-  background-color: var(--color-background);
+  color: var(--color-foreground);              /* Standard: Uses standard foreground color */
+  background-color: var(--color-background);   /* Standard: Uses standard background color */
+  line-height: 1.6;                           /* Enhanced: Better readability */
+}
+
+/* Ensure all text elements inherit proper contrast */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

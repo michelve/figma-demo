@@ -1,6 +1,6 @@
 [
   {
-    "Design System | Base Tokens": {
+    "Design System | Primitive Tokens": {
       "modes": {
         "Light Mode": {
           "colors": {
@@ -77,7 +77,13 @@
               "50": {
                 "$scopes": ["ALL_FILLS"],
                 "$type": "color",
-                "$value": "#fafafa"
+                "$value": "#fafafa",
+                "$description": "Neutral color for checkmarks and light elements",
+                "$codeSyntax": {
+                  "WEB": "var(--color-neutral-50)",
+                  "ANDROID": "colorNeutral50",
+                  "iOS": "neutralColor50"
+                }
               },
               "100": {
                 "$scopes": ["ALL_FILLS"],
@@ -100,12 +106,12 @@
                 "$value": "#a1a1aa"
               },
               "500": {
-                "$scopes": ["ALL_FILLS"],
+                "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
                 "$type": "color",
                 "$value": "#71717a"
               },
               "600": {
-                "$scopes": ["ALL_FILLS"],
+                "$scopes": ["ALL_FILLS", "TEXT_FILL"],
                 "$type": "color",
                 "$value": "#52525b"
               },
@@ -120,7 +126,7 @@
                 "$value": "#27272a"
               },
               "900": {
-                "$scopes": ["ALL_FILLS"],
+                "$scopes": ["ALL_FILLS", "TEXT_FILL"],
                 "$type": "color",
                 "$value": "#18181b"
               },
@@ -128,81 +134,159 @@
                 "$scopes": ["ALL_FILLS"],
                 "$type": "color",
                 "$value": "#09090b"
-              },
-              "white": {
-                "$scopes": ["ALL_FILLS"],
-                "$type": "color",
-                "$value": "#ffffff",
-                "$codeSyntax": {
-                  "WEB": "var(--color-white)",
-                  "ANDROID": "colorWhite",
-                  "iOS": "whiteColor"
-                }
               }
             },
             "success": {
+              "50": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#f0fdf4"
+              },
               "500": {
                 "$scopes": ["ALL_FILLS"],
                 "$type": "color",
-                "$value": "#22c55e",
-                "$description": "Success state color"
+                "$value": "#22c55e"
+              },
+              "600": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#16a34a"
               }
             },
             "warning": {
+              "50": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#fffbeb"
+              },
               "500": {
                 "$scopes": ["ALL_FILLS"],
                 "$type": "color",
-                "$value": "#f59e0b",
-                "$description": "Warning state color"
+                "$value": "#f59e0b"
+              },
+              "600": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#d97706"
               }
             },
             "error": {
+              "50": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#fef2f2"
+              },
               "500": {
                 "$scopes": ["ALL_FILLS"],
                 "$type": "color",
-                "$value": "#ef4444",
-                "$description": "Error state color"
+                "$value": "#ef4444"
+              },
+              "600": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#dc2626"
+              },
+              "700": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#b91c1c"
+              }
+            },
+            "basic": {
+              "white": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#ffffff"
+              },
+              "black": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "#000000"
+              },
+              "transparent": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$value": "rgba(0, 0, 0, 0)",
+                "$description": "Transparent color for outline actions"
               }
             }
           },
           "spacing": {
-            "xs": {
+            "0": {
               "$scopes": ["GAP", "WIDTH_HEIGHT"],
               "$type": "float",
-              "$value": 4,
-              "$description": "Extra small spacing",
+              "$value": 0
+            },
+            "px": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 1
+            },
+            "0.5": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 2
+            },
+            "1": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 4
+            },
+            "2": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 8,
+              "$description": "Tight spacing - 8px",
               "$codeSyntax": {
-                "WEB": "var(--spacing-xs)",
-                "ANDROID": "spacingXs",
-                "iOS": "spacingXS"
+                "WEB": "var(--space-2)",
+                "ANDROID": "space2",
+                "iOS": "space2"
               }
             },
-            "sm": {
+            "3": {
               "$scopes": ["GAP", "WIDTH_HEIGHT"],
               "$type": "float",
-              "$value": 8
+              "$value": 12
             },
-            "md": {
+            "4": {
               "$scopes": ["GAP", "WIDTH_HEIGHT"],
               "$type": "float",
-              "$value": 16
+              "$value": 16,
+              "$description": "Standard component spacing - 16px",
+              "$codeSyntax": {
+                "WEB": "var(--space-4)",
+                "ANDROID": "space4",
+                "iOS": "space4"
+              }
             },
-            "lg": {
+            "5": {
               "$scopes": ["GAP", "WIDTH_HEIGHT"],
               "$type": "float",
-              "$value": 24
+              "$value": 20
             },
-            "xl": {
+            "6": {
               "$scopes": ["GAP", "WIDTH_HEIGHT"],
               "$type": "float",
-              "$value": 32
+              "$value": 24,
+              "$description": "Loose spacing - 24px"
             },
-            "2xl": {
+            "8": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 32,
+              "$description": "Section spacing - 32px"
+            },
+            "10": {
+              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$type": "float",
+              "$value": 40
+            },
+            "12": {
               "$scopes": ["GAP", "WIDTH_HEIGHT"],
               "$type": "float",
               "$value": 48
             },
-            "3xl": {
+            "16": {
               "$scopes": ["GAP", "WIDTH_HEIGHT"],
               "$type": "float",
               "$value": 64
@@ -223,7 +307,7 @@
               "$scopes": ["CORNER_RADIUS"],
               "$type": "float",
               "$value": 6,
-              "$description": "Medium border radius",
+              "$description": "Interactive elements radius",
               "$codeSyntax": {
                 "WEB": "var(--radius-md)",
                 "ANDROID": "radiusMd",
@@ -233,12 +317,14 @@
             "lg": {
               "$scopes": ["CORNER_RADIUS"],
               "$type": "float",
-              "$value": 8
+              "$value": 8,
+              "$description": "Surface elements radius"
             },
             "xl": {
               "$scopes": ["CORNER_RADIUS"],
               "$type": "float",
-              "$value": 12
+              "$value": 12,
+              "$description": "Overlay elements radius"
             },
             "full": {
               "$scopes": ["CORNER_RADIUS"],
@@ -255,7 +341,7 @@
                 "$value": "system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif",
                 "$description": "Primary font family",
                 "$codeSyntax": {
-                  "WEB": "var(--font-primary)",
+                  "WEB": "var(--font-family-primary)",
                   "ANDROID": "fontPrimary",
                   "iOS": "fontPrimary"
                 }
@@ -271,6 +357,29 @@
                 "$type": "string",
                 "$value": "'Fira Code', 'Monaco', 'Cascadia Code', 'Ubuntu Mono', monospace",
                 "$description": "Monospace font for code"
+              }
+            },
+            "font-weight": {
+              "normal": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 400
+              },
+              "medium": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 500
+              },
+              "semibold": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 600
+              },
+              "bold": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 700,
+                "$description": "Bold weight for headings"
               }
             },
             "font-size": {
@@ -309,34 +418,41 @@
                 "$scopes": ["FONT_SIZE"],
                 "$type": "float",
                 "$value": 24
+              },
+              "3xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 30
+              },
+              "4xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 36
+              },
+              "5xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 48
               }
-            },
-            "font-weight": {
-              "normal": {
-                "$scopes": ["FONT_WEIGHT"],
+            }
+          },
+          "border": {
+            "width": {
+              "0": {
+                "$scopes": ["STROKE_WEIGHT"],
                 "$type": "float",
-                "$value": 400
+                "$value": 0
               },
-              "medium": {
-                "$scopes": ["FONT_WEIGHT"],
+              "1": {
+                "$scopes": ["STROKE_WEIGHT"],
                 "$type": "float",
-                "$value": 500,
-                "$description": "Medium font weight",
-                "$codeSyntax": {
-                  "WEB": "var(--font-weight-medium)",
-                  "ANDROID": "fontWeightMedium",
-                  "iOS": "fontWeightMedium"
-                }
+                "$value": 1
               },
-              "semibold": {
-                "$scopes": ["FONT_WEIGHT"],
+              "2": {
+                "$scopes": ["STROKE_WEIGHT"],
                 "$type": "float",
-                "$value": 600
-              },
-              "bold": {
-                "$scopes": ["FONT_WEIGHT"],
-                "$type": "float",
-                "$value": 700
+                "$value": 2,
+                "$description": "Checkbox border width"
               }
             }
           },
@@ -344,19 +460,28 @@
             "0": {
               "$scopes": ["OPACITY"],
               "$type": "float",
-              "$value": 0,
-              "$description": "Completely transparent"
+              "$value": 0
             },
             "50": {
               "$scopes": ["OPACITY"],
               "$type": "float",
-              "$value": 0.5
+              "$value": 0.5,
+              "$description": "Disabled state opacity"
+            },
+            "80": {
+              "$scopes": ["OPACITY"],
+              "$type": "float",
+              "$value": 0.8
+            },
+            "90": {
+              "$scopes": ["OPACITY"],
+              "$type": "float",
+              "$value": 0.9
             },
             "100": {
               "$scopes": ["OPACITY"],
               "$type": "float",
-              "$value": 1,
-              "$description": "Completely opaque"
+              "$value": 1
             }
           }
         }
@@ -369,12 +494,12 @@
         "Default": {
           "action": {
             "primary": {
-              "$scopes": ["ALL_FILLS", "STROKE_COLOR"],
+              "$scopes": ["ALL_FILLS"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.primary.600}",
-              "$description": "Primary action color - main brand interaction",
+              "$description": "Primary action color",
               "$codeSyntax": {
                 "WEB": "var(--action-primary)",
                 "ANDROID": "actionPrimary",
@@ -385,25 +510,78 @@
               "$scopes": ["ALL_FILLS"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.primary.700}",
               "$description": "Primary action hover state"
+            },
+            "primary-active": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.primary.800}",
+              "$description": "Primary action active state"
             },
             "secondary": {
               "$scopes": ["ALL_FILLS"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.neutral.100}",
-              "$description": "Secondary action color"
+              "$description": "Secondary action background"
+            },
+            "secondary-hover": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.neutral.200}",
+              "$description": "Secondary action hover state"
             },
             "destructive": {
               "$scopes": ["ALL_FILLS"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.error.500}",
               "$description": "Destructive action color"
+            },
+            "destructive-hover": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.error.600}",
+              "$description": "Destructive action hover state"
+            },
+            "outline": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.basic.transparent}",
+              "$description": "Outline/ghost action background - Updated for checkboxes",
+              "$codeSyntax": {
+                "WEB": "var(--action-outline)",
+                "ANDROID": "actionOutline",
+                "iOS": "actionOutline"
+              }
+            },
+            "outline-text": {
+              "$scopes": ["TEXT_FILL"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.primary.600}",
+              "$description": "Outline action text color"
+            },
+            "outline-border": {
+              "$scopes": ["STROKE_COLOR"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.primary.600}",
+              "$description": "Outline action border color"
             }
           },
           "surface": {
@@ -411,61 +589,90 @@
               "$scopes": ["ALL_FILLS"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.neutral.50}",
-              "$description": "Main background surface",
-              "$codeSyntax": {
-                "WEB": "var(--surface-background)",
-                "ANDROID": "surfaceBackground",
-                "iOS": "surfaceBackground"
-              }
+              "$description": "Main background surface"
             },
             "elevated": {
               "$scopes": ["ALL_FILLS"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
-              "$value": "{colors.neutral.white}",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.basic.white}",
               "$description": "Elevated surface (cards, modals)"
             },
-            "overlay": {
+            "muted": {
               "$scopes": ["ALL_FILLS"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
-              "$value": "{colors.neutral.900}",
-              "$description": "Overlay surface for modals"
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.neutral.100}",
+              "$description": "Muted background surface"
             }
           },
           "content": {
             "primary": {
-              "$scopes": ["ALL_FILLS"],
+              "$scopes": ["TEXT_FILL"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.neutral.900}",
-              "$description": "Primary text content",
+              "$description": "Primary text color - matches --color-foreground",
               "$codeSyntax": {
-                "WEB": "var(--content-primary)",
+                "WEB": "var(--color-foreground)",
                 "ANDROID": "contentPrimary",
                 "iOS": "contentPrimary"
               }
             },
             "secondary": {
-              "$scopes": ["ALL_FILLS"],
+              "$scopes": ["TEXT_FILL"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.neutral.600}",
-              "$description": "Secondary text content"
+              "$description": "Secondary text color - matches --color-muted-foreground",
+              "$codeSyntax": {
+                "WEB": "var(--color-muted-foreground)",
+                "ANDROID": "contentSecondary",
+                "iOS": "contentSecondary"
+              }
+            },
+            "tertiary": {
+              "$scopes": ["TEXT_FILL"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.neutral.500}",
+              "$description": "Tertiary text color"
             },
             "inverse": {
+              "$scopes": ["TEXT_FILL"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.basic.white}",
+              "$description": "Inverse text color for dark backgrounds"
+            },
+            "disabled": {
+              "$scopes": ["TEXT_FILL"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.neutral.400}",
+              "$description": "Disabled text color"
+            },
+            "icon-light": {
               "$scopes": ["ALL_FILLS"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
-              "$value": "{colors.neutral.white}",
-              "$description": "Inverse text content (on dark backgrounds)"
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.neutral.50}",
+              "$description": "Light icon color for checkmarks - Updated for checkboxes",
+              "$codeSyntax": {
+                "WEB": "var(--color-neutral-50)",
+                "ANDROID": "iconLight",
+                "iOS": "iconLight"
+              }
             }
           },
           "border": {
@@ -473,7 +680,7 @@
               "$scopes": ["STROKE_COLOR"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.neutral.200}",
               "$description": "Default border color"
             },
@@ -481,19 +688,35 @@
               "$scopes": ["STROKE_COLOR"],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
+              "$collectionName": "Design System | Primitive Tokens",
               "$value": "{colors.neutral.300}",
-              "$description": "Interactive element borders"
+              "$description": "Interactive border color"
+            },
+            "focus": {
+              "$scopes": ["STROKE_COLOR"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.primary.600}",
+              "$description": "Focus ring border color"
+            },
+            "error": {
+              "$scopes": ["STROKE_COLOR"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.error.500}",
+              "$description": "Error state border color"
             }
           },
           "spacing": {
             "component": {
-              "$scopes": ["GAP", "WIDTH_HEIGHT"],
+              "$scopes": ["GAP"],
               "$type": "float",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
-              "$value": "{spacing.md}",
-              "$description": "Standard component spacing",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{spacing.4}",
+              "$description": "Standard component spacing - 16px",
               "$codeSyntax": {
                 "WEB": "var(--spacing-component)",
                 "ANDROID": "spacingComponent",
@@ -504,17 +727,156 @@
               "$scopes": ["GAP"],
               "$type": "float",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
-              "$value": "{spacing.sm}",
-              "$description": "Tight spacing for compact layouts"
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{spacing.2}",
+              "$description": "Tight spacing for compact layouts - 8px"
             },
             "loose": {
               "$scopes": ["GAP"],
               "$type": "float",
               "$libraryName": "",
-              "$collectionName": "Design System | Base Tokens",
-              "$value": "{spacing.lg}",
-              "$description": "Loose spacing for spacious layouts"
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{spacing.6}",
+              "$description": "Loose spacing for spacious layouts - 24px"
+            },
+            "section": {
+              "$scopes": ["GAP"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{spacing.8}",
+              "$description": "Section spacing - 32px"
+            }
+          },
+          "radius": {
+            "interactive": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{radius.md}",
+              "$description": "Interactive elements radius - buttons, inputs",
+              "$codeSyntax": {
+                "WEB": "var(--radius-interactive)",
+                "ANDROID": "radiusInteractive",
+                "iOS": "radiusInteractive"
+              }
+            },
+            "surface": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{radius.lg}",
+              "$description": "Surface elements radius - cards, panels"
+            },
+            "overlay": {
+              "$scopes": ["CORNER_RADIUS"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{radius.xl}",
+              "$description": "Overlay elements radius - modals, popovers"
+            }
+          },
+          "state": {
+            "success": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.success.500}",
+              "$description": "Success state color"
+            },
+            "warning": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.warning.500}",
+              "$description": "Warning state color"
+            },
+            "error": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.error.500}",
+              "$description": "Error state color"
+            },
+            "info": {
+              "$scopes": ["ALL_FILLS"],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{colors.primary.500}",
+              "$description": "Info state color"
+            },
+            "disabled-opacity": {
+              "$scopes": ["OPACITY"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{opacity.50}",
+              "$description": "Disabled state opacity"
+            }
+          },
+          "typography": {
+            "action": {
+              "$scopes": ["FONT_FAMILY"],
+              "$type": "string",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{typography.font-family.primary}",
+              "$description": "Font family for interactive elements"
+            },
+            "content": {
+              "$scopes": ["FONT_FAMILY"],
+              "$type": "string",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{typography.font-family.primary}",
+              "$description": "Font family for content text"
+            },
+            "heading": {
+              "$scopes": ["FONT_FAMILY"],
+              "$type": "string",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{typography.font-family.heading}",
+              "$description": "Font family for headings"
+            },
+            "weight-action": {
+              "$scopes": ["FONT_WEIGHT"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{typography.font-weight.medium}",
+              "$description": "Font weight for actions"
+            },
+            "weight-content": {
+              "$scopes": ["FONT_WEIGHT"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{typography.font-weight.normal}",
+              "$description": "Font weight for content"
+            },
+            "weight-emphasis": {
+              "$scopes": ["FONT_WEIGHT"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{typography.font-weight.semibold}",
+              "$description": "Font weight for emphasis"
+            },
+            "weight-heading": {
+              "$scopes": ["FONT_WEIGHT"],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "Design System | Primitive Tokens",
+              "$value": "{typography.font-weight.bold}",
+              "$description": "Font weight for headings - default bold"
             }
           }
         }
@@ -536,7 +898,7 @@
                 "$description": "Primary button uses semantic primary action color"
               },
               "text": {
-                "$scopes": ["ALL_FILLS"],
+                "$scopes": ["TEXT_FILL"],
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "Design System | Semantic Tokens",
@@ -555,8 +917,8 @@
                 "$scopes": ["CORNER_RADIUS"],
                 "$type": "float",
                 "$libraryName": "",
-                "$collectionName": "Design System | Base Tokens",
-                "$value": "{radius.md}"
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{radius.interactive}"
               }
             },
             "secondary": {
@@ -569,7 +931,7 @@
                 "$description": "Secondary button uses semantic secondary action"
               },
               "text": {
-                "$scopes": ["ALL_FILLS"],
+                "$scopes": ["TEXT_FILL"],
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "Design System | Semantic Tokens",
@@ -590,23 +952,141 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "Design System | Semantic Tokens",
-                "$value": "{surface.background}",
-                "$description": "Outline button uses background surface"
+                "$value": "{action.outline}",
+                "$description": "Outline button uses transparent background"
               },
               "text": {
-                "$scopes": ["ALL_FILLS"],
+                "$scopes": ["TEXT_FILL"],
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "Design System | Semantic Tokens",
-                "$value": "{content.primary}"
+                "$value": "{action.outline-text}"
               },
               "border": {
                 "$scopes": ["STROKE_COLOR"],
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "Design System | Semantic Tokens",
-                "$value": "{border.interactive}",
+                "$value": "{action.outline-border}",
                 "$description": "Outline button uses interactive border"
+              }
+            },
+            "destructive": {
+              "background": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{action.destructive}",
+                "$description": "Destructive button uses semantic destructive action"
+              },
+              "text": {
+                "$scopes": ["TEXT_FILL"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{content.inverse}",
+                "$description": "Destructive button text uses inverse content color"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "Component Library | Checkbox Tokens": {
+      "modes": {
+        "Default": {
+          "checkbox": {
+            "default": {
+              "background": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{action.outline}",
+                "$description": "Checkbox default background - transparent/outline action",
+                "$codeSyntax": {
+                  "WEB": "var(--action-outline)",
+                  "ANDROID": "checkboxBackground",
+                  "iOS": "checkboxBackground"
+                }
+              },
+              "border": {
+                "$scopes": ["STROKE_COLOR"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Primitive Tokens",
+                "$value": "{colors.neutral.500}",
+                "$description": "Checkbox default border color"
+              },
+              "checkmark": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{content.icon-light}",
+                "$description": "Checkbox checkmark color - light neutral for visibility",
+                "$codeSyntax": {
+                  "WEB": "var(--color-neutral-50)",
+                  "ANDROID": "checkboxCheckmark",
+                  "iOS": "checkboxCheckmark"
+                }
+              },
+              "border-width": {
+                "$scopes": ["STROKE_WEIGHT"],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "Design System | Primitive Tokens",
+                "$value": "{border.width.2}",
+                "$description": "Checkbox border width"
+              },
+              "radius": {
+                "$scopes": ["CORNER_RADIUS"],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{radius.interactive}",
+                "$description": "Checkbox corner radius"
+              }
+            },
+            "checked": {
+              "background": {
+                "$scopes": ["ALL_FILLS"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{action.primary}",
+                "$description": "Checkbox checked background - primary action"
+              },
+              "border": {
+                "$scopes": ["STROKE_COLOR"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{action.primary}",
+                "$description": "Checkbox checked border matches background"
+              }
+            },
+            "disabled": {
+              "opacity": {
+                "$scopes": ["OPACITY"],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{state.disabled-opacity}",
+                "$description": "Checkbox disabled opacity"
+              }
+            },
+            "focus": {
+              "ring": {
+                "$scopes": ["STROKE_COLOR"],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "Design System | Semantic Tokens",
+                "$value": "{border.focus}",
+                "$description": "Checkbox focus ring color"
               }
             }
           }

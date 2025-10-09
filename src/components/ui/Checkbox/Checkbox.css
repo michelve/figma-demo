@@ -74,8 +74,8 @@
   border-style: solid;
   transition: var(--transition-all);
   
-  /* Default colors - always neutral-50 background, neutral-500 border */
-  background-color: var(--color-neutral-50);
+  /* Default colors - action-outline background, neutral-500 border */
+  background-color: var(--action-outline);
   border-color: var(--color-neutral-500);
 }
 
@@ -85,7 +85,7 @@
 
 /* Unchecked State */
 .checkbox--unchecked {
-  background-color: var(--color-neutral-50);
+  background-color: var(--action-outline);
   border-color: var(--color-neutral-500);
 }
 
@@ -169,7 +169,7 @@
    ========================= */
 
 .checkbox-icon {
-  color: var(--content-inverse);
+  color: var(--color-neutral-50);
   transition: var(--transition-opacity);
   flex-shrink: 0;
 }
@@ -219,7 +219,7 @@
   font-size: var(--font-size-base);
   font-weight: var(--typography-weight-content);
   line-height: var(--line-height-normal);
-  color: var(--content-secondary);
+  color: var(--color-muted-foreground);
   
   /* Interaction */
   cursor: var(--cursor-pointer);
@@ -241,7 +241,7 @@
   /* Typography */
   font-size: var(--font-size-sm);
   line-height: var(--line-height-relaxed);
-  color: var(--content-tertiary);
+  color: var(--color-muted-foreground);
   
   /* Transition */
   transition: var(--transition-colors);
@@ -257,7 +257,7 @@
 
 @media (prefers-color-scheme: dark) {
   .checkbox--unchecked {
-    background-color: var(--surface-elevated);
+    background-color: var(--action-outline);
     border-color: var(--border-default);
   }
   

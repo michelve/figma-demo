@@ -65,21 +65,21 @@
 /* Style Variants */
 .btn--primary {
   background-color: var(--action-primary);
-  color: var(--color-error-50);
+  color: var(--color-neutral-50);
   border: var(--button-border-width) solid var(--action-primary);
 }
 
 .btn--primary:hover:not(.btn--disabled) {
   background-color: var(--action-primary-hover);
   border-color: var(--action-primary-hover);
-  color: var(--color-error-50);
+  color: var(--color-neutral-50);
   box-shadow: var(--button-shadow-hover);
 }
 
 .btn--primary:active:not(.btn--disabled) {
   background-color: var(--action-primary-active);
   border-color: var(--action-primary-active);
-  color: var(--color-error-50);
+  color: var(--color-neutral-50);
   box-shadow: var(--button-shadow-active);
 }
 
@@ -109,7 +109,7 @@
 
 .btn--outline:hover:not(.btn--disabled) {
   background-color: var(--action-primary);
-  color: var(--color-error-50);
+  color: var(--color-neutral-50);
   box-shadow: var(--button-shadow-hover);
 }
 

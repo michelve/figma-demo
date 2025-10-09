@@ -1,4 +1,4 @@
-/* Typography System - Using Semantic Content Tokens for Proper Contrast */
+/* Typography System - Using Standard Foreground Colors */
 
 /* ===== DISPLAY TEXT STYLES ===== */
 .display-large {
@@ -6,7 +6,7 @@
   line-height: 64px;
   font-weight: 700;
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: -0.25px;
 }
 
@@ -15,7 +15,7 @@
   line-height: 52px;
   font-weight: 700;
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0px;
 }
 
@@ -24,67 +24,128 @@
   line-height: 44px;
   font-weight: 700;
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0px;
 }
 
-/* ===== HEADING STYLES ===== */
-h1, .heading-h1 {
+/* ===== HEADING HIERARCHY (Semantic Naming) ===== */
+h1, .heading-page-title {
   font-size: 32px;
   line-height: 40px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);        /* Bold default for page titles */
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0px;
   margin: 0 0 24px 0;
 }
 
-h2, .heading-h2 {
+h2, .heading-section-title {
   font-size: 28px;
   line-height: 36px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);        /* Bold default for section titles */
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0px;
   margin: 0 0 20px 0;
 }
 
-h3, .heading-h3 {
+h3, .heading-subsection-title {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);        /* Bold default for subsection titles */
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0px;
   margin: 0 0 16px 0;
 }
 
-h4, .heading-h4 {
+h4, .heading-article-title {
   font-size: 20px;
   line-height: 28px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);        /* Bold default for article titles */
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0px;
   margin: 0 0 12px 0;
 }
 
-h5, .heading-h5 {
+h5, .heading-minor-title {
   font-size: 18px;
   line-height: 24px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);        /* Bold default for minor titles */
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0px;
   margin: 0 0 8px 0;
 }
 
-h6, .heading-h6 {
+h6, .heading-smallest-title {
   font-size: 16px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);        /* Bold default for smallest titles */
   font-family: var(--font-family-heading);
-  color: var(--content-primary);
+  color: var(--color-foreground);
+  letter-spacing: 0px;
+  margin: 0 0 8px 0;
+}
+
+/* ===== LEGACY HEADING CLASSES (Backward Compatibility) ===== */
+.heading-h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  color: var(--color-foreground);
+  letter-spacing: 0px;
+  margin: 0 0 24px 0;
+}
+
+.heading-h2 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  color: var(--color-foreground);
+  letter-spacing: 0px;
+  margin: 0 0 20px 0;
+}
+
+.heading-h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  color: var(--color-foreground);
+  letter-spacing: 0px;
+  margin: 0 0 16px 0;
+}
+
+.heading-h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  color: var(--color-foreground);
+  letter-spacing: 0px;
+  margin: 0 0 12px 0;
+}
+
+.heading-h5 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  color: var(--color-foreground);
+  letter-spacing: 0px;
+  margin: 0 0 8px 0;
+}
+
+.heading-h6 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  color: var(--color-foreground);
   letter-spacing: 0px;
   margin: 0 0 8px 0;
 }
@@ -95,7 +156,7 @@ p, .body-large {
   line-height: 24px;
   font-weight: 400;
   font-family: var(--font-family-body);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0.5px;
   margin: 0 0 16px 0;
 }
@@ -105,7 +166,7 @@ p, .body-large {
   line-height: 20px;
   font-weight: 400;
   font-family: var(--font-family-body);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   letter-spacing: 0.25px;
 }
 
@@ -114,17 +175,17 @@ p, .body-large {
   line-height: 16px;
   font-weight: 400;
   font-family: var(--font-family-body);
-  color: var(--content-secondary);
+  color: var(--color-muted-foreground);
   letter-spacing: 0.4px;
 }
 
 /* ===== SECONDARY TEXT STYLES ===== */
 .text-secondary {
-  color: var(--content-secondary);
+  color: var(--color-muted-foreground);
 }
 
 .text-tertiary {
-  color: var(--content-tertiary);
+  color: var(--color-muted-foreground);
 }
 
 .text-inverse {
@@ -141,7 +202,7 @@ p, .body-large {
   line-height: 20px;
   font-weight: 500;
   font-family: var(--font-family-body);
-  color: var(--content-secondary);
+  color: var(--color-muted-foreground);
   letter-spacing: 0.1px;
 }
 
@@ -150,7 +211,7 @@ p, .body-large {
   line-height: 16px;
   font-weight: 500;
   font-family: var(--font-family-body);
-  color: var(--content-secondary);
+  color: var(--color-muted-foreground);
   letter-spacing: 0.5px;
 }
 
@@ -159,7 +220,7 @@ p, .body-large {
   line-height: 16px;
   font-weight: 500;
   font-family: var(--font-family-body);
-  color: var(--content-secondary);
+  color: var(--color-muted-foreground);
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -170,7 +231,7 @@ p, .body-large {
   line-height: 16px;
   font-weight: 400;
   font-family: var(--font-family-body);
-  color: var(--content-tertiary);
+  color: var(--color-muted-foreground);
   letter-spacing: 0.4px;
 }
 
@@ -179,7 +240,7 @@ p, .body-large {
   line-height: 20px;
   font-weight: 400;
   font-family: var(--font-family-body);
-  color: var(--content-tertiary);
+  color: var(--color-muted-foreground);
   letter-spacing: 0.25px;
 }
 
@@ -189,7 +250,7 @@ p, .body-large {
   line-height: 16px;
   font-weight: 400;
   font-family: var(--font-family-body);
-  color: var(--content-tertiary);
+  color: var(--color-muted-foreground);
   letter-spacing: 0.4px;
 }
 
@@ -198,7 +259,7 @@ p, .body-large {
   line-height: 16px;
   font-weight: 500;
   font-family: var(--font-family-body);
-  color: var(--content-secondary);
+  color: var(--color-muted-foreground);
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -209,7 +270,7 @@ code, .code-inline {
   line-height: 20px;
   font-weight: 400;
   font-family: var(--font-family-mono);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   background-color: var(--surface-secondary);
   padding: 2px 6px;
   border-radius: 4px;
@@ -221,7 +282,7 @@ pre, .code-block {
   line-height: 20px;
   font-weight: 400;
   font-family: var(--font-family-mono);
-  color: var(--content-primary);
+  color: var(--color-foreground);
   background-color: var(--surface-secondary);
   padding: 16px;
   border-radius: 8px;
@@ -338,19 +399,90 @@ a:visited, .link:visited {
   }
 }
 
-/* ===== ERROR AND SUCCESS TEXT STATES ===== */
-.text-error {
+/* ===== STATUS TEXT STYLES (Semantic Naming) ===== */
+
+/* Error and Validation Text */
+.text-error,
+.text-validation-error,
+.text-destructive {
+  color: var(--status-error);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Warning and Cautionary Text */
+.text-warning,
+.text-caution,
+.text-alert {
+  color: var(--status-warning);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Success and Confirmation Text */
+.text-success,
+.text-confirmation,
+.text-positive {
+  color: var(--status-success);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Info and Neutral Text */
+.text-info,
+.text-informational,
+.text-notice {
+  color: var(--status-info);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ===== STATUS TEXT VARIATIONS ===== */
+
+/* Validation Message Styles */
+.text-validation-message {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin-top: 4px;
+}
+
+.text-validation-error-message {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin-top: 4px;
   color: var(--status-error);
 }
 
-.text-warning {
-  color: var(--status-warning);
-}
-
-.text-success {
+.text-validation-success-message {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin-top: 4px;
   color: var(--status-success);
 }
 
-.text-info {
+/* Field Status Text */
+.text-field-error {
+  color: var(--status-error);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.text-field-helper {
+  color: var(--color-muted-foreground);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Alert Text Styles */
+.text-alert-critical {
+  color: var(--status-error);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.text-alert-moderate {
+  color: var(--status-warning);
+  font-weight: var(--font-weight-medium);
+}
+
+.text-alert-low {
   color: var(--status-info);
+  font-weight: var(--font-weight-normal);
 }

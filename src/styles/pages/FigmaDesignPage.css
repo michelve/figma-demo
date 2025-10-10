@@ -1,0 +1,259 @@
+/* Figma Design Page - Node 5-430 Styles */
+/* Built with semantic tokens and Figma variables */
+
+.figma-page {
+  min-height: 100vh;
+  background: var(--surface-background);
+  font-family: var(--font-family-primary);
+  padding: var(--spacing-section) 0;
+}
+
+.figma-page__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-component);
+}
+
+/* Header Section */
+.figma-page__header {
+  text-align: center;
+  margin-bottom: var(--spacing-section);
+}
+
+.figma-page__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--content-primary);
+  margin: 0 0 var(--spacing-tight) 0;
+  line-height: var(--leading-10);
+}
+
+.figma-page__subtitle {
+  font-size: var(--text-lg);
+  color: var(--content-secondary);
+  margin: 0;
+  line-height: var(--leading-6);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Card Grid Layout - Matches Figma Design */
+.figma-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-loose);
+  margin-bottom: var(--spacing-section);
+}
+
+/* Figma Card Styling */
+.figma-card {
+  height: fit-content;
+  transition: transform 0.2s ease-in-out;
+}
+
+.figma-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Card Content Styles */
+.card-content {
+  padding: var(--spacing-tight) 0;
+}
+
+/* Metrics Display */
+.card-metrics {
+  display: flex;
+  gap: var(--spacing-component);
+  padding: var(--spacing-tight) 0;
+}
+
+.metric {
+  text-align: center;
+  flex: 1;
+}
+
+.metric__value {
+  display: block;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--content-primary);
+  line-height: var(--leading-7);
+}
+
+.metric__label {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--content-secondary);
+  margin-top: 4px;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: var(--spacing-tight);
+  padding: var(--spacing-tight) 0;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component);
+  align-items: center;
+  text-align: center;
+}
+
+.profile-card__avatar {
+  width: 64px;
+  height: 64px;
+  background: var(--surface-muted);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--content-secondary);
+  border: 2px solid var(--border-default);
+}
+
+.profile-card__info {
+  flex: 1;
+}
+
+.profile-card__name {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--content-primary);
+  margin: 0 0 4px 0;
+}
+
+.profile-card__role {
+  font-size: var(--text-base);
+  color: var(--content-secondary);
+  margin: 0 0 8px 0;
+  font-weight: var(--font-weight-medium);
+}
+
+.profile-card__email {
+  font-size: var(--text-sm);
+  color: var(--content-tertiary);
+  margin: 0;
+}
+
+.profile-card__actions {
+  width: 100%;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-component);
+  padding: var(--spacing-tight) 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: var(--spacing-tight);
+  background: var(--surface-muted);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.stat-item__value {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--content-primary);
+  line-height: 1;
+}
+
+.stat-item__label {
+  font-size: var(--text-xs);
+  color: var(--content-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Settings Panel */
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-tight) 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-item__label {
+  font-size: var(--text-sm);
+  color: var(--content-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.setting-actions {
+  margin-top: var(--spacing-tight);
+  padding-top: var(--spacing-tight);
+  border-top: 1px solid var(--border-default);
+}
+
+/* Footer */
+.figma-page__footer {
+  text-align: center;
+  padding-top: var(--spacing-section);
+  border-top: 1px solid var(--border-default);
+}
+
+.figma-page__footer-text {
+  font-size: var(--text-sm);
+  color: var(--content-tertiary);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .figma-page__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-component);
+  }
+  
+  .figma-page__title {
+    font-size: var(--text-3xl);
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+  }
+  
+  .setting-item {
+    flex-direction: column;
+    gap: var(--spacing-tight);
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .figma-page__container {
+    padding: 0 var(--spacing-tight);
+  }
+  
+  .card-metrics {
+    flex-direction: column;
+    gap: var(--spacing-tight);
+  }
+}

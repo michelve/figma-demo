@@ -1,5 +1,5 @@
 import Input from './Input'
-import figma from '@figma/code-connect'
+import figma from '@figma/code-connect/react'
 
 /**
  * Figma Code Connect mapping for Input component

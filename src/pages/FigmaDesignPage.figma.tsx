@@ -1,5 +1,5 @@
 import FigmaDesignPage from './FigmaDesignPage'
-import figma from '@figma/code-connect'
+import figma from '@figma/code-connect/react'
 
 /**
  * Figma Code Connect mapping for Design System Showcase Page

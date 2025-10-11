@@ -1,5 +1,7 @@
 import Card from './Card'
 import Button from '../Button'
+import Input from '../Input'
+import Textarea from '../Textarea'
 import figma from '@figma/code-connect'
 // Import common icons for examples
 import { User, Mail, ArrowRight } from 'lucide-react'
@@ -198,6 +200,84 @@ figma.connect(
         description={props.description}
       >
         {props.children}
+      </Card>
+    ),
+  }
+)
+
+// Card with Form Content - Form variant mapping
+figma.connect(
+  Card,
+  'https://www.figma.com/design/qXl9yDZA6jPlyknXOSLe51/DesignDS-MCP?node-id=26-453&m=dev', // Replace with your form card variant URL
+  {
+    props: {
+      // Card variant
+      variant: figma.enum('variant', {
+        'Card with form': 'form',
+        'Default': 'default',
+      }),
+      
+      // Form properties
+      title: figma.textContent('Card Heading'),
+      showDivider: figma.boolean('showDivider', {
+        true: true,
+        false: false,
+      }),
+      
+      // Form field labels and placeholders
+      nameLabel: figma.textContent('Name'),
+      addressLabel: figma.textContent('Address'), 
+      phoneLabel: figma.textContent('Phone Number'),
+      messageLabel: figma.textContent('Your message'),
+      
+      // Button properties
+      showButton: figma.boolean('showButton', {
+        true: true,
+        false: false,
+      }),
+      buttonText: figma.textContent('Send Form'),
+    },
+    example: (props) => (
+      <Card
+        variant={props.variant}
+        title={props.title}
+        showDivider={props.showDivider}
+      >
+        <form style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-component)' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-tight)' }}>
+            <label style={{ fontSize: 'var(--typography-body-sm)', fontWeight: 'var(--font-weight-medium)', color: 'var(--content-secondary)' }}>
+              {props.nameLabel}
+            </label>
+            <Input placeholder="Enter your full name" />
+          </div>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-tight)' }}>
+            <label style={{ fontSize: 'var(--typography-body-sm)', fontWeight: 'var(--font-weight-medium)', color: 'var(--content-secondary)' }}>
+              {props.addressLabel}
+            </label>
+            <Input placeholder="Enter your address" />
+          </div>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-tight)' }}>
+            <label style={{ fontSize: 'var(--typography-body-sm)', fontWeight: 'var(--font-weight-medium)', color: 'var(--content-secondary)' }}>
+              {props.phoneLabel}
+            </label>
+            <Input type="tel" placeholder="(555) 123-4567" />
+          </div>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-tight)' }}>
+            <label style={{ fontSize: 'var(--typography-body-sm)', fontWeight: 'var(--font-weight-medium)', color: 'var(--content-secondary)' }}>
+              {props.messageLabel}
+            </label>
+            <Textarea rows={4} placeholder="Tell us how we can help you..." />
+          </div>
+          
+          {props.showButton && (
+            <Button variant="primary" type="submit" style={{ alignSelf: 'flex-start', marginTop: 'var(--spacing-tight)' }}>
+              {props.buttonText}
+            </Button>
+          )}
+        </form>
       </Card>
     ),
   }

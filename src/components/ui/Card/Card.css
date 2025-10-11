@@ -3,27 +3,27 @@
 .card {
   /* Surface - Elevated card background - FORCED LIGHT MODE */
   background-color: var(--surface-elevated) !important;
-  
+
   /* Border - Default semantic border - FORCED LIGHT MODE */
   border: 1px solid var(--border-default) !important;
-  
+
   /* Border radius - Standard component radius */
   border-radius: var(--radius-md);
-  
+
   /* Default padding - 16px using semantic spacing token */
   padding: var(--spacing-component);
-  
+
   /* Box shadow for elevation - LIGHT MODE OPTIMIZED */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-  
+
   /* Transition for interactive states */
   transition: all 0.2s ease-in-out;
-  
+
   /* Layout */
   display: flex;
   flex-direction: column;
   gap: var(--spacing-component);
-  
+
   /* Force light mode color scheme */
   color-scheme: light !important;
 }
@@ -42,13 +42,13 @@
   font-size: var(--text-lg);
   font-weight: var(--font-weight-semibold);
   line-height: var(--leading-6);
-  
+
   /* Content color - Primary semantic - FORCED LIGHT MODE */
   color: var(--content-primary) !important;
-  
+
   /* Reset margins */
   margin: 0;
-  
+
   /* Text rendering */
   letter-spacing: -0.025em;
 }
@@ -60,10 +60,10 @@
   font-size: var(--text-sm);
   font-weight: var(--font-weight-normal);
   line-height: var(--leading-5);
-  
+
   /* Content color - Secondary semantic - FORCED LIGHT MODE */
   color: var(--content-secondary) !important;
-  
+
   /* Reset margins */
   margin: 0;
 }
@@ -73,10 +73,10 @@
   /* Border - Semantic divider - FORCED LIGHT MODE */
   height: 1px;
   background-color: var(--border-default) !important;
-  
+
   /* Spacing - Negative margin to connect with card padding */
   margin: 0 calc(-1 * var(--spacing-component));
-  
+
   /* Ensure full width */
   width: calc(100% + 2 * var(--spacing-component));
 }
@@ -85,7 +85,7 @@
 .card__content {
   /* Flexible content area */
   flex: 1;
-  
+
   /* Content can control its own layout */
   display: flex;
   flex-direction: column;
@@ -95,12 +95,64 @@
 .card:hover {
   /* Enhanced shadow on hover - LIGHT MODE OPTIMIZED */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  
+
   /* Subtle border color change - FORCED LIGHT MODE */
   border-color: var(--border-interactive) !important;
 }
 
 /* Card Variants */
+
+/* Default Card Variant */
+.card--default {
+  /* Uses base card styles */
+}
+
+/* Form Card Variant - Optimized for form layouts */
+.card--form {
+  /* Enhanced padding for form content */
+  padding: var(--spacing-section); /* 32px for better form spacing */
+  gap: var(--spacing-component); /* 16px between form elements */
+
+  /* Slightly wider max-width for forms */
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+
+  /* Enhanced shadow for form prominence */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.card--form:hover {
+  /* Maintain enhanced shadow on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Card Header - Enhanced typography */
+.card--form .card__title {
+  font-size: var(--typography-heading-4); /* 24px */
+  font-weight: var(--font-weight-bold); /* 700 */
+  color: var(--content-primary);
+  margin-bottom: var(--spacing-tight); /* 8px */
+  text-align: left;
+}
+
+.card--form .card__description {
+  font-size: var(--typography-body-base); /* 16px */
+  color: var(--content-secondary);
+  margin-bottom: var(--spacing-component); /* 16px */
+}
+
+/* Form Card Content - Form-specific spacing */
+.card--form .card__content {
+  gap: var(--spacing-component); /* 16px between form fields */
+}
+
+/* Form Card Divider - Matches form aesthetic */
+.card--form .card__divider {
+  margin: var(--spacing-tight) calc(-1 * var(--spacing-section));
+  width: calc(100% + 2 * var(--spacing-section));
+  background-color: var(--border-muted);
+}
 
 /* Elevated Card - More prominent shadow */
 .card--elevated {
@@ -152,13 +204,36 @@
     padding: var(--spacing-tight);
     gap: var(--spacing-tight);
   }
-  
+
+  .card--form {
+    /* Maintain better spacing on mobile for forms */
+    padding: var(--spacing-component); /* 16px */
+    margin: var(--spacing-tight); /* 8px margin */
+  }
+
+  .card--form .card__title {
+    font-size: var(--typography-heading-6); /* 18px on mobile */
+  }
+
+  .card--form .card__divider {
+    margin: var(--spacing-tight) calc(-1 * var(--spacing-component));
+    width: calc(100% + 2 * var(--spacing-component));
+  }
+
   .card__divider {
     margin: 0 calc(-1 * var(--spacing-tight));
     width: calc(100% + 2 * var(--spacing-tight));
   }
-  
+
   .card__title {
     font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .card--form {
+    /* Even more compact on very small screens */
+    padding: var(--spacing-component);
+    margin: 0;
   }
 }

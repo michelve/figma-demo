@@ -41,7 +41,7 @@ export default function ContactForm() {
   return (
     <div className="contact-form-container">
       {/* Main Contact Form */}
-      <Card className="contact-form-card">
+      <Card variant="form" className="contact-form-card">
         <div className="form-content">
           <h2 className="form-title">Contact Us</h2>
           

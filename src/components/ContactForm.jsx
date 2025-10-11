@@ -2,8 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import Button from './ui/Button';
-import Card from './ui/Card';
+import { Button, Card, Input, Textarea } from './index';
 import './ContactForm.css';
 
 // Form validation schema
@@ -52,10 +51,10 @@ export default function ContactForm() {
               <label htmlFor="name" className="form-label">
                 Name *
               </label>
-              <input
+              <Input
                 id="name"
                 type="text"
-                className={`form-input ${errors.name ? 'form-input--error' : ''}`}
+                variant={errors.name ? 'error' : 'default'}
                 placeholder="Enter your full name"
                 {...register('name')}
               />
@@ -69,10 +68,10 @@ export default function ContactForm() {
               <label htmlFor="address" className="form-label">
                 Address
               </label>
-              <input
+              <Input
                 id="address"
                 type="text"
-                className={`form-input ${errors.address ? 'form-input--error' : ''}`}
+                variant={errors.address ? 'error' : 'default'}
                 placeholder="Enter your address"
                 {...register('address')}
               />
@@ -86,10 +85,10 @@ export default function ContactForm() {
               <label htmlFor="tel" className="form-label">
                 Phone Number *
               </label>
-              <input
+              <Input
                 id="tel"
                 type="tel"
-                className={`form-input ${errors.tel ? 'form-input--error' : ''}`}
+                variant={errors.tel ? 'error' : 'default'}
                 placeholder="(555) 123-4567"
                 {...register('tel')}
               />
@@ -103,10 +102,10 @@ export default function ContactForm() {
               <label htmlFor="message" className="form-label">
                 Your Message *
               </label>
-              <textarea
+              <Textarea
                 id="message"
                 rows={4}
-                className={`form-input form-textarea ${errors.message ? 'form-input--error' : ''}`}
+                variant={errors.message ? 'error' : 'default'}
                 placeholder="Tell us how we can help you..."
                 {...register('message')}
               />

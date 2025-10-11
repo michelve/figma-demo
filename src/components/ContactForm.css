@@ -60,50 +60,6 @@
   margin: 0;
 }
 
-/* Form Inputs */
-.form-input {
-  width: 100%;
-  height: var(--button-height-md);
-  padding: var(--spacing-tight) var(--spacing-component); /* 8px 16px */
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-interactive); /* 6px */
-  background-color: var(--surface-elevated);
-  color: var(--content-primary);
-  font-size: var(--typography-body-base); /* 16px */
-  font-family: var(--typography-content);
-  transition: var(--transition-default);
-  box-sizing: border-box;
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: var(--border-focus);
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
-}
-
-.form-input::placeholder {
-  color: var(--color-muted-foreground);
-}
-
-/* Textarea Specific */
-.form-textarea {
-  height: calc(var(--button-height-md) + var(--space-8)); /* 40px + 32px = 72px */
-  resize: vertical;
-  min-height: calc(var(--button-height-md) + var(--space-8));
-  padding-top: var(--spacing-tight); /* 8px */
-}
-
-/* Error States */
-.form-input--error {
-  border-color: var(--state-error);
-  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.2);
-}
-
-.form-input--error:focus {
-  border-color: var(--state-error);
-  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.3);
-}
-
 .form-error {
   font-size: var(--typography-body-xs); /* 12px */
   color: var(--state-error);
@@ -190,29 +146,5 @@
   .contact-info-section {
     margin: 0;
     padding: var(--spacing-component); /* 16px */
-  }
-}
-
-/* Focus Management for Accessibility */
-.form-input:focus-visible,
-.submit-button:focus-visible {
-  outline: var(--focus-ring-width) solid var(--focus-ring-color);
-  outline-offset: var(--focus-ring-offset);
-}
-
-/* Loading State */
-.submit-button:disabled {
-  opacity: var(--state-disabled-opacity);
-  cursor: not-allowed;
-}
-
-/* High Contrast Support */
-@media (prefers-contrast: high) {
-  .form-input {
-    border-width: var(--border-width-2);
-  }
-
-  .form-input:focus {
-    border-width: var(--border-width-4);
   }
 }

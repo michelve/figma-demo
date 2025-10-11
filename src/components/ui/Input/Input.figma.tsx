@@ -11,7 +11,7 @@ import figma from '@figma/code-connect'
 // Main Input component connection
 figma.connect(
   Input,
-  'https://www.figma.com/design/qXl9yDZA6jPlyknXOSLe51/DesignDS-MCP?node-id=INPUT-ID', // Replace with your Figma component URL
+  'https://www.figma.com/design/qXl9yDZA6jPlyknXOSLe51/DesignDS-MCP?node-id=5-294&m=dev&t=9OnwPOfRCYDyyN5v-1', // Replace with your Figma component URL
   {
     props: {
       // Map Figma variant property to React variant prop

@@ -266,7 +266,7 @@ The MCP provides structured Figma data, but output quality depends on prompt spe
 "Generate iOS SwiftUI code from the selected Figma frame"
 
 # Component Libraries
-"Implement the selected frame using Chakra UI components"
+"Implement the selected frame using ShadCN UI components"
 "Create this using Material-UI components with TypeScript"
 
 # Styling Systems

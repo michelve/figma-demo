@@ -1,10 +1,10 @@
 /* Typography Design Tokens */
 :root {
   /* Font Families */
-  --font-family-primary: 'Roboto';
-  --font-family-secondary: 'Inter', var(--font-family-primary);
-  --font-family-mono: 'Fira Code', 'Monaco', 'Cascadia Code', 'Ubuntu Mono', monospace;
-  --font-family-heading: 'Poppins', var(--font-family-primary);
+  --font-family-primary: "Roboto";
+  --font-family-secondary: "Inter";
+  --font-family-mono: "Monaco";
+  --font-family-heading: "Poppins";
 
   /* Font Weights */
   --font-weight-thin: 100;
@@ -18,19 +18,19 @@
   --font-weight-black: 900;
 
   /* Font Sizes */
-  --font-size-xs: 0.75rem;     /* 12px */
-  --font-size-sm: 0.875rem;    /* 14px */
-  --font-size-base: 1rem;      /* 16px */
-  --font-size-lg: 1.125rem;    /* 18px */
-  --font-size-xl: 1.25rem;     /* 20px */
-  --font-size-2xl: 1.5rem;     /* 24px */
-  --font-size-3xl: 1.875rem;   /* 30px */
-  --font-size-4xl: 2.25rem;    /* 36px */
-  --font-size-5xl: 3rem;       /* 48px */
-  --font-size-6xl: 3.75rem;    /* 60px */
-  --font-size-7xl: 4.5rem;     /* 72px */
-  --font-size-8xl: 6rem;       /* 96px */
-  --font-size-9xl: 8rem;       /* 128px */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+  --font-size-5xl: 3rem; /* 48px */
+  --font-size-6xl: 3.75rem; /* 60px */
+  --font-size-7xl: 4.5rem; /* 72px */
+  --font-size-8xl: 6rem; /* 96px */
+  --font-size-9xl: 8rem; /* 128px */
 
   /* Line Heights */
   --line-height-none: 1;
@@ -49,25 +49,25 @@
   --letter-spacing-widest: 0.1em;
 
   /* Text Size Aliases - Semantic naming for components */
-  --text-xs: var(--font-size-xs);      /* 12px */
-  --text-sm: var(--font-size-sm);      /* 14px */
-  --text-base: var(--font-size-base);  /* 16px */
-  --text-lg: var(--font-size-lg);      /* 18px - FIXED: Card title size */
-  --text-xl: var(--font-size-xl);      /* 20px */
-  --text-2xl: var(--font-size-2xl);    /* 24px */
-  --text-3xl: var(--font-size-3xl);    /* 30px */
-  --text-4xl: var(--font-size-4xl);    /* 36px */
-  --text-5xl: var(--font-size-5xl);    /* 48px */
+  --text-xs: var(--font-size-xs); /* 12px */
+  --text-sm: var(--font-size-sm); /* 14px */
+  --text-base: var(--font-size-base); /* 16px */
+  --text-lg: var(--font-size-lg); /* 18px - FIXED: Card title size */
+  --text-xl: var(--font-size-xl); /* 20px */
+  --text-2xl: var(--font-size-2xl); /* 24px */
+  --text-3xl: var(--font-size-3xl); /* 30px */
+  --text-4xl: var(--font-size-4xl); /* 36px */
+  --text-5xl: var(--font-size-5xl); /* 48px */
 
   /* Line Height Aliases - Semantic naming for components */
-  --leading-3: 0.75rem;        /* 12px */
-  --leading-4: 1rem;           /* 16px */
-  --leading-5: 1.25rem;        /* 20px */
-  --leading-6: 1.5rem;         /* 24px */
-  --leading-7: 1.75rem;        /* 28px */
-  --leading-8: 2rem;           /* 32px */
-  --leading-9: 2.25rem;        /* 36px */
-  --leading-10: 2.5rem;        /* 40px */
+  --leading-3: 0.75rem; /* 12px */
+  --leading-4: 1rem; /* 16px */
+  --leading-5: 1.25rem; /* 20px */
+  --leading-6: 1.5rem; /* 24px */
+  --leading-7: 1.75rem; /* 28px */
+  --leading-8: 2rem; /* 32px */
+  --leading-9: 2.25rem; /* 36px */
+  --leading-10: 2.5rem; /* 40px */
 
   /* Typography Scale for Components */
   --typography-button-sm: var(--font-size-sm);
@@ -120,36 +120,80 @@
   /* Button size specific typography */
   --button-sm-font-size: var(--font-size-sm);
   --button-sm-line-height: 1.25rem; /* 20px */
-  
+
   --button-md-font-size: var(--font-size-base);
   --button-md-line-height: 1.5rem; /* 24px */
-  
+
   --button-lg-font-size: var(--font-size-lg);
   --button-lg-line-height: 1.75rem; /* 28px */
 }
 
 /* Typography Utility Classes */
-.text-xs { font-size: var(--font-size-xs); }
-.text-sm { font-size: var(--font-size-sm); }
-.text-base { font-size: var(--font-size-base); }
-.text-lg { font-size: var(--font-size-lg); }
-.text-xl { font-size: var(--font-size-xl); }
-.text-2xl { font-size: var(--font-size-2xl); }
-.text-3xl { font-size: var(--font-size-3xl); }
-.text-4xl { font-size: var(--font-size-4xl); }
-.text-5xl { font-size: var(--font-size-5xl); }
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+.text-base {
+  font-size: var(--font-size-base);
+}
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+.text-2xl {
+  font-size: var(--font-size-2xl);
+}
+.text-3xl {
+  font-size: var(--font-size-3xl);
+}
+.text-4xl {
+  font-size: var(--font-size-4xl);
+}
+.text-5xl {
+  font-size: var(--font-size-5xl);
+}
 
-.font-thin { font-weight: var(--font-weight-thin); }
-.font-light { font-weight: var(--font-weight-light); }
-.font-normal { font-weight: var(--font-weight-normal); }
-.font-medium { font-weight: var(--font-weight-medium); }
-.font-semibold { font-weight: var(--font-weight-semibold); }
-.font-bold { font-weight: var(--font-weight-bold); }
-.font-extrabold { font-weight: var(--font-weight-extrabold); }
+.font-thin {
+  font-weight: var(--font-weight-thin);
+}
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+.font-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
 
-.leading-none { line-height: var(--line-height-none); }
-.leading-tight { line-height: var(--line-height-tight); }
-.leading-snug { line-height: var(--line-height-snug); }
-.leading-normal { line-height: var(--line-height-normal); }
-.leading-relaxed { line-height: var(--line-height-relaxed); }
-.leading-loose { line-height: var(--line-height-loose); }
+.leading-none {
+  line-height: var(--line-height-none);
+}
+.leading-tight {
+  line-height: var(--line-height-tight);
+}
+.leading-snug {
+  line-height: var(--line-height-snug);
+}
+.leading-normal {
+  line-height: var(--line-height-normal);
+}
+.leading-relaxed {
+  line-height: var(--line-height-relaxed);
+}
+.leading-loose {
+  line-height: var(--line-height-loose);
+}

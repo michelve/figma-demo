@@ -13,7 +13,7 @@
     "test:update": "playwright test --update-snapshots",
     "test:report": "playwright show-report",
     "test:config": "node tests/verify-config.js",
-    "figma-socket": "bunx cursor-talk-to-figma-socket",
+    "figma-socket": "bun x cursor-talk-to-figma-socket",
     "figma:connect:init": "figma connect init",
     "figma:connect:create": "figma connect create",
     "figma:connect:publish": "figma connect publish",

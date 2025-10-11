@@ -2,90 +2,96 @@
 
 /* ===== DISPLAY TEXT STYLES ===== */
 .display-large {
-  font-size: 57px;
-  line-height: 64px;
-  font-weight: 700;
+  font-size: var(--font-size-7xl); /* 72px */
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: -0.25px;
+  letter-spacing: var(--letter-spacing-tighter);
 }
 
 .display-medium {
-  font-size: 45px;
-  line-height: 52px;
-  font-weight: 700;
+  font-size: var(--font-size-5xl); /* 48px */
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
 }
 
 .display-small {
-  font-size: 36px;
-  line-height: 44px;
-  font-weight: 700;
+  font-size: var(--font-size-4xl); /* 36px */
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
 }
 
 /* ===== HEADING HIERARCHY (Semantic Naming) ===== */
-h1, .heading-page-title {
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: var(--font-weight-bold);        /* Bold default for page titles */
+h1,
+.heading-page-title {
+  font-size: var(--font-size-3xl); /* 30px */
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
   margin: 0 0 24px 0;
 }
 
-h2, .heading-section-title {
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: var(--font-weight-bold);        /* Bold default for section titles */
+h2,
+.heading-section-title {
+  font-size: var(--font-size-2xl); /* 24px */
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
   margin: 0 0 20px 0;
 }
 
-h3, .heading-subsection-title {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: var(--font-weight-bold);        /* Bold default for subsection titles */
+h3,
+.heading-subsection-title {
+  font-size: var(--font-size-xl); /* 20px */
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-semibold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
   margin: 0 0 16px 0;
 }
 
-h4, .heading-article-title {
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: var(--font-weight-bold);        /* Bold default for article titles */
+h4,
+.heading-article-title {
+  font-size: var(--font-size-lg); /* 18px */
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-semibold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
   margin: 0 0 12px 0;
 }
 
-h5, .heading-minor-title {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: var(--font-weight-bold);        /* Bold default for minor titles */
+h5,
+.heading-minor-title {
+  font-size: var(--font-size-base); /* 16px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-semibold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
   margin: 0 0 8px 0;
 }
 
-h6, .heading-smallest-title {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: var(--font-weight-bold);        /* Bold default for smallest titles */
+h6,
+.heading-smallest-title {
+  font-size: var(--font-size-sm); /* 14px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-semibold);
   font-family: var(--font-family-heading);
   color: var(--color-foreground);
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
   margin: 0 0 8px 0;
 }
 
@@ -151,32 +157,33 @@ h6, .heading-smallest-title {
 }
 
 /* ===== PARAGRAPH AND BODY TEXT STYLES ===== */
-p, .body-large {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  font-family: var(--font-family-body);
+p,
+.body-large {
+  font-size: var(--font-size-base); /* 16px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-primary);
   color: var(--color-foreground);
-  letter-spacing: 0.5px;
+  letter-spacing: var(--letter-spacing-wide);
   margin: 0 0 16px 0;
 }
 
 .body-medium {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm); /* 14px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-primary);
   color: var(--color-foreground);
-  letter-spacing: 0.25px;
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .body-small {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs); /* 12px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-primary);
   color: var(--color-muted-foreground);
-  letter-spacing: 0.4px;
+  letter-spacing: var(--letter-spacing-wider);
 }
 
 /* ===== SECONDARY TEXT STYLES ===== */
@@ -198,119 +205,125 @@ p, .body-large {
 
 /* ===== LABEL STYLES ===== */
 .label-large {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
-  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm); /* 14px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-primary);
   color: var(--color-muted-foreground);
-  letter-spacing: 0.1px;
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .label-medium {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs); /* 12px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-primary);
   color: var(--color-muted-foreground);
-  letter-spacing: 0.5px;
+  letter-spacing: var(--letter-spacing-wider);
 }
 
 .label-small {
-  font-size: 11px;
-  line-height: 16px;
-  font-weight: 500;
-  font-family: var(--font-family-body);
+  font-size: 11px; /* Custom size not in tokens */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-primary);
   color: var(--color-muted-foreground);
-  letter-spacing: 0.5px;
+  letter-spacing: var(--letter-spacing-wider);
   text-transform: uppercase;
 }
 
 /* ===== HELPER AND DESCRIPTION TEXT ===== */
 .helper-text {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs); /* 12px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-primary);
   color: var(--color-muted-foreground);
-  letter-spacing: 0.4px;
+  letter-spacing: var(--letter-spacing-wider);
 }
 
 .description-text {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm); /* 14px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-primary);
   color: var(--color-muted-foreground);
-  letter-spacing: 0.25px;
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 /* ===== CAPTION AND OVERLINE STYLES ===== */
 .caption {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs); /* 12px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-primary);
   color: var(--color-muted-foreground);
-  letter-spacing: 0.4px;
+  letter-spacing: var(--letter-spacing-wider);
 }
 
 .overline {
-  font-size: 10px;
-  line-height: 16px;
-  font-weight: 500;
-  font-family: var(--font-family-body);
+  font-size: 10px; /* Custom size not in tokens */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-primary);
   color: var(--color-muted-foreground);
-  letter-spacing: 1.5px;
+  letter-spacing: var(--letter-spacing-widest);
   text-transform: uppercase;
 }
 
 /* ===== CODE AND MONOSPACE TEXT ===== */
-code, .code-inline {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+code,
+.code-inline {
+  font-size: var(--font-size-sm); /* 14px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
   font-family: var(--font-family-mono);
   color: var(--color-foreground);
-  background-color: var(--surface-secondary);
+  background-color: var(--surface-muted);
   padding: 2px 6px;
   border-radius: 4px;
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
 }
 
-pre, .code-block {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+pre,
+.code-block {
+  font-size: var(--font-size-sm); /* 14px */
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
   font-family: var(--font-family-mono);
   color: var(--color-foreground);
-  background-color: var(--surface-secondary);
+  background-color: var(--surface-muted);
   padding: 16px;
   border-radius: 8px;
-  letter-spacing: 0px;
+  letter-spacing: var(--letter-spacing-normal);
   overflow-x: auto;
   margin: 16px 0;
 }
 
 /* ===== LINK STYLES ===== */
-a, .link {
-  font-family: var(--font-family-body);
+a,
+.link {
+  font-family: var(--font-family-primary);
   color: var(--action-primary);
   text-decoration: underline;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
-a:hover, .link:hover {
+a:hover,
+.link:hover {
   color: var(--action-primary-hover);
 }
 
-a:focus, .link:focus {
+a:focus,
+.link:focus {
   outline: 2px solid var(--border-focus);
   outline-offset: 2px;
   border-radius: 2px;
 }
 
-a:visited, .link:visited {
+a:visited,
+.link:visited {
   color: var(--action-primary);
 }
 
@@ -377,23 +390,25 @@ a:visited, .link:visited {
     font-size: 48px;
     line-height: 56px;
   }
-  
+
   .display-medium {
     font-size: 36px;
     line-height: 44px;
   }
-  
+
   .display-small {
     font-size: 28px;
     line-height: 36px;
   }
-  
-  h1, .heading-h1 {
+
+  h1,
+  .heading-h1 {
     font-size: 28px;
     line-height: 36px;
   }
-  
-  h2, .heading-h2 {
+
+  h2,
+  .heading-h2 {
     font-size: 24px;
     line-height: 32px;
   }

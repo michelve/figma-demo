@@ -1,0 +1,370 @@
+[
+  {
+    "Design System | Typography Tokens": {
+      "modes": {
+        "Default": {
+          "typography": {
+            "font-family": {
+              "primary": {
+                "$scopes": ["FONT_FAMILY"],
+                "$type": "string",
+                "$value": "Roboto",
+                "$description": "Primary font family",
+                "$codeSyntax": {
+                  "WEB": "var(--font-family-primary)",
+                  "ANDROID": "fontPrimary",
+                  "iOS": "fontPrimary"
+                }
+              },
+              "secondary": {
+                "$scopes": ["FONT_FAMILY"],
+                "$type": "string",
+                "$value": "Inter",
+                "$description": "Secondary font family with fallback",
+                "$codeSyntax": {
+                  "WEB": "var(--font-family-secondary)",
+                  "ANDROID": "fontSecondary",
+                  "iOS": "fontSecondary"
+                }
+              },
+              "mono": {
+                "$scopes": ["FONT_FAMILY"],
+                "$type": "string",
+                "$value": "Monaco",
+                "$description": "Monospace font for code",
+                "$codeSyntax": {
+                  "WEB": "var(--font-family-mono)",
+                  "ANDROID": "fontMono",
+                  "iOS": "fontMono"
+                }
+              },
+              "heading": {
+                "$scopes": ["FONT_FAMILY"],
+                "$type": "string",
+                "$value": "Poppins",
+                "$description": "Heading font family with fallback",
+                "$codeSyntax": {
+                  "WEB": "var(--font-family-heading)",
+                  "ANDROID": "fontHeading",
+                  "iOS": "fontHeading"
+                }
+              }
+            },
+            "font-weight": {
+              "thin": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 100,
+                "$description": "Thin font weight",
+                "$codeSyntax": {
+                  "WEB": "var(--font-weight-thin)",
+                  "ANDROID": "fontWeightThin",
+                  "iOS": "fontWeightThin"
+                }
+              },
+              "extralight": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 200,
+                "$description": "Extra light font weight"
+              },
+              "light": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 300,
+                "$description": "Light font weight"
+              },
+              "normal": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 400,
+                "$description": "Normal font weight",
+                "$codeSyntax": {
+                  "WEB": "var(--font-weight-normal)",
+                  "ANDROID": "fontWeightNormal",
+                  "iOS": "fontWeightNormal"
+                }
+              },
+              "medium": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 500,
+                "$description": "Medium font weight",
+                "$codeSyntax": {
+                  "WEB": "var(--font-weight-medium)",
+                  "ANDROID": "fontWeightMedium",
+                  "iOS": "fontWeightMedium"
+                }
+              },
+              "semibold": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 600,
+                "$description": "Semi-bold font weight",
+                "$codeSyntax": {
+                  "WEB": "var(--font-weight-semibold)",
+                  "ANDROID": "fontWeightSemibold",
+                  "iOS": "fontWeightSemibold"
+                }
+              },
+              "bold": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 700,
+                "$description": "Bold font weight",
+                "$codeSyntax": {
+                  "WEB": "var(--font-weight-bold)",
+                  "ANDROID": "fontWeightBold",
+                  "iOS": "fontWeightBold"
+                }
+              },
+              "extrabold": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 800,
+                "$description": "Extra bold font weight",
+                "$codeSyntax": {
+                  "WEB": "var(--font-weight-extrabold)",
+                  "ANDROID": "fontWeightExtrabold",
+                  "iOS": "fontWeightExtrabold"
+                }
+              },
+              "black": {
+                "$scopes": ["FONT_WEIGHT"],
+                "$type": "float",
+                "$value": 900,
+                "$description": "Black font weight"
+              }
+            },
+            "font-size": {
+              "xs": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 12,
+                "$description": "Extra small font size - 12px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-xs)",
+                  "ANDROID": "fontSizeXs",
+                  "iOS": "fontSizeXs"
+                }
+              },
+              "sm": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 14,
+                "$description": "Small font size - 14px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-sm)",
+                  "ANDROID": "fontSizeSm",
+                  "iOS": "fontSizeSm"
+                }
+              },
+              "base": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 16,
+                "$description": "Base font size - 16px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-base)",
+                  "ANDROID": "fontSizeBase",
+                  "iOS": "fontSizeBase"
+                }
+              },
+              "lg": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 18,
+                "$description": "Large font size - 18px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-lg)",
+                  "ANDROID": "fontSizeLg",
+                  "iOS": "fontSizeLg"
+                }
+              },
+              "xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 20,
+                "$description": "Extra large font size - 20px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-xl)",
+                  "ANDROID": "fontSizeXl",
+                  "iOS": "fontSizeXl"
+                }
+              },
+              "2xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 24,
+                "$description": "2x large font size - 24px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-2xl)",
+                  "ANDROID": "fontSize2xl",
+                  "iOS": "fontSize2xl"
+                }
+              },
+              "3xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 30,
+                "$description": "3x large font size - 30px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-3xl)",
+                  "ANDROID": "fontSize3xl",
+                  "iOS": "fontSize3xl"
+                }
+              },
+              "4xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 36,
+                "$description": "4x large font size - 36px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-4xl)",
+                  "ANDROID": "fontSize4xl",
+                  "iOS": "fontSize4xl"
+                }
+              },
+              "5xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 48,
+                "$description": "5x large font size - 48px",
+                "$codeSyntax": {
+                  "WEB": "var(--font-size-5xl)",
+                  "ANDROID": "fontSize5xl",
+                  "iOS": "fontSize5xl"
+                }
+              },
+              "6xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 60,
+                "$description": "6x large font size - 60px"
+              },
+              "7xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 72,
+                "$description": "7x large font size - 72px"
+              },
+              "8xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 96,
+                "$description": "8x large font size - 96px"
+              },
+              "9xl": {
+                "$scopes": ["FONT_SIZE"],
+                "$type": "float",
+                "$value": 128,
+                "$description": "9x large font size - 128px"
+              }
+            },
+            "line-height": {
+              "none": {
+                "$scopes": ["LINE_HEIGHT"],
+                "$type": "float",
+                "$value": 1,
+                "$description": "No line height multiplier",
+                "$codeSyntax": {
+                  "WEB": "var(--line-height-none)",
+                  "ANDROID": "lineHeightNone",
+                  "iOS": "lineHeightNone"
+                }
+              },
+              "tight": {
+                "$scopes": ["LINE_HEIGHT"],
+                "$type": "float",
+                "$value": 1.25,
+                "$description": "Tight line height",
+                "$codeSyntax": {
+                  "WEB": "var(--line-height-tight)",
+                  "ANDROID": "lineHeightTight",
+                  "iOS": "lineHeightTight"
+                }
+              },
+              "snug": {
+                "$scopes": ["LINE_HEIGHT"],
+                "$type": "float",
+                "$value": 1.375,
+                "$description": "Snug line height"
+              },
+              "normal": {
+                "$scopes": ["LINE_HEIGHT"],
+                "$type": "float",
+                "$value": 1.5,
+                "$description": "Normal line height",
+                "$codeSyntax": {
+                  "WEB": "var(--line-height-normal)",
+                  "ANDROID": "lineHeightNormal",
+                  "iOS": "lineHeightNormal"
+                }
+              },
+              "relaxed": {
+                "$scopes": ["LINE_HEIGHT"],
+                "$type": "float",
+                "$value": 1.625,
+                "$description": "Relaxed line height",
+                "$codeSyntax": {
+                  "WEB": "var(--line-height-relaxed)",
+                  "ANDROID": "lineHeightRelaxed",
+                  "iOS": "lineHeightRelaxed"
+                }
+              },
+              "loose": {
+                "$scopes": ["LINE_HEIGHT"],
+                "$type": "float",
+                "$value": 2,
+                "$description": "Loose line height"
+              }
+            },
+            "letter-spacing": {
+              "tighter": {
+                "$scopes": ["LETTER_SPACING"],
+                "$type": "float",
+                "$value": -0.05,
+                "$description": "Tighter letter spacing"
+              },
+              "tight": {
+                "$scopes": ["LETTER_SPACING"],
+                "$type": "float",
+                "$value": -0.025,
+                "$description": "Tight letter spacing"
+              },
+              "normal": {
+                "$scopes": ["LETTER_SPACING"],
+                "$type": "float",
+                "$value": 0,
+                "$description": "Normal letter spacing",
+                "$codeSyntax": {
+                  "WEB": "var(--letter-spacing-normal)",
+                  "ANDROID": "letterSpacingNormal",
+                  "iOS": "letterSpacingNormal"
+                }
+              },
+              "wide": {
+                "$scopes": ["LETTER_SPACING"],
+                "$type": "float",
+                "$value": 0.025,
+                "$description": "Wide letter spacing"
+              },
+              "wider": {
+                "$scopes": ["LETTER_SPACING"],
+                "$type": "float",
+                "$value": 0.05,
+                "$description": "Wider letter spacing"
+              },
+              "widest": {
+                "$scopes": ["LETTER_SPACING"],
+                "$type": "float",
+                "$value": 0.1,
+                "$description": "Widest letter spacing"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

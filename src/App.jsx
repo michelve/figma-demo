@@ -1,6 +1,7 @@
 import React from 'react';
 import ComponentsDemo from './pages/ComponentsDemo';
 import FigmaDesignPage from './pages/FigmaDesignPage';
+import { ContactForm } from './components';
 
 export default function App() {
   const [currentPage, setCurrentPage] = React.useState('components');
@@ -9,6 +10,8 @@ export default function App() {
     switch (currentPage) {
       case 'figma-design':
         return <FigmaDesignPage />;
+      case 'contact-form':
+        return <ContactForm />;
       case 'components':
       default:
         return <ComponentsDemo />;
@@ -62,6 +65,22 @@ export default function App() {
           }}
         >
           Figma Design (5-430)
+        </button>
+        <button
+          type="button"
+          onClick={() => setCurrentPage('contact-form')}
+          style={{
+            background: currentPage === 'contact-form' ? 'var(--action-primary)' : 'var(--action-secondary)',
+            color: currentPage === 'contact-form' ? 'var(--color-neutral-50)' : 'var(--content-primary)',
+            border: '1px solid var(--border-default)',
+            padding: 'var(--spacing-tight) var(--spacing-component)',
+            borderRadius: 'var(--radius-md)',
+            cursor: 'pointer',
+            fontFamily: 'var(--font-family-primary)',
+            fontSize: 'var(--text-sm)'
+          }}
+        >
+          Contact Form
         </button>
       </nav>
       
